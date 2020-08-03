@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="JS && ReactJS Prep Questions" />
+    <meta name="keywords" content="JavaScrpt, React, Interview, Questions" />
+    <meta name="author" content="Ulan Rakymzhanov for Seytech School" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS && ReactJS Prep Questions</title>
+    <!-- github css -->
+    <!-- <link rel="stylesheet" type="text/css" href="urakymzhan/index.css" /> -->
+    <!-- local css -->
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <!-- highlights.js -->
+    <link rel="stylesheet" href="/highlight/styles/agate.css" />
+    <script src="/highlight/highlight.pack.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <em>© Seytech Students</em>
+    <main>
+      <h1 id="title">
+        <span style="color: #795548;">JavaScript </span> &&
+        <span style="color: #795548;">ReactJS</span> Interview Preparation
+        Questions<br />
+        <span id="note">Click on questions to unlock the answers</span>
+      </h1>
+
+      <div class="container">
+        <!-- JS Questions -->
+        <h4>JavaScript Questions - Concepts</h4>
+
+        <h3>What is functional programming?</h3>
+        <div class="answer">
+          Functional Programming produces programs by composing mathematical
+          functions and avoids shared state & mutable data.
+          <pre><code>Terms: Pure functions, Avoid side-effects, higher order functions</code></pre>
+        </div>
+
+        <h3>
+          What is asynchronous programming, and why is it important in
+          JavaScript?
+        </h3>
+        <div class="answer">
+          Synchronous programming means that, barring conditionals and function
+          calls, code is executed sequentially from top-to-bottom, blocking on
+          long-running tasks such as network requests and disk I/O.<br />
+          Asynchronous programming means that the engine runs in an event loop.
+          <br />When a blocking operation is needed, the request is started, and
+          the code keeps running without blocking for the result. <br />When the
+          response is ready, an interrupt is fired, which causes an event
+          handler to be run, where the control flow continues.<br />
+          In this way, a single program thread can handle many concurrent
+          operations.<br />
+          <pre><code>Terms: top-to-bottom, blocking, event loop</code></pre>
+        </div>
+
+        <h3>
+          What is a potential pitfall with using typeof bar === "object" to
+          determine if bar is an object? How can this pitfall be avoided?
+        </h3>
+        <div class="answer">
+          <pre><code>typeof [] also an object. typeof null also an object</code></pre>
+        </div>
+
+        <!-- ReactJS Questions -->
+        <h4>ReactJS Questions</h4>
+
+        <h3>
+          What are the different versions of CSS? Which one you use right now?
+        </h3>
+        <div class="answer">
+          Different versions of CSS are:
+        </div>
+
+        <!-- REFERANCE -->
+        <div id="ref-wrapper">
+          <h1 style="text-align: right; font-size: 20px;">
+            <a href="#title" style="text-decoration: none;"> GO TO TOP </a>
+          </h1>
+          <h1 id="referance-title">Referances</h1>
+          <ul id="referance">
+            <li>
+              <a
+                href="http://learn.seytech.co/courses/htmlcss/prepation"
+                target="_blank"
+                >seytech</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/yangshun/front-end-interview-handbook/blob/master/contents/en/css-questions.md#table-of-contents"
+                target="_blank"
+                >yangshun</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.thatjsdude.com/interview/html.html#bdo"
+                target="_blank"
+                >thatjsdude</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.w3schools.com/css/default.asp"
+                target="_blank"
+                >w3schools</a
+              >
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/" target="_blank"
+                >MDN</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.indeed.com/hire/interview-questions/css?aceid=&gclid=Cj0KCQjwgo_5BRDuARIsADDEntQ7QUfXU7ohlfsPK1eitgOQCcgm1W2Kl56VPY_dCwYtHWnifLPCkWMaAp4xEALw_wcB"
+                target="_blank"
+                >Indeed</a
+              >
+            </li>
+            <li>
+              <a
+                href="http://peterdoes.it/2015/12/03/a-personal-exercise-front-end-job-interview-questions-and-my-answers-all/"
+                target="_blank"
+                >Peter Dillon</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>

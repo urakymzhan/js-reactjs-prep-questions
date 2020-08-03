@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+em {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 13px;
+  opacity: 0.3;
+}
+i {
+  text-decoration: underline;
+}
+#note {
+  font-size: 12px;
+  color: gray;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Patrick Hand', cursive;
+  background-color: #ecfded;
+}
+
+main {
+  text-align: center;
+}
+
+#title {
+  color: #009688;
+  box-shadow: 0 2px 3px #009688;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+h4 {
+  color: #e54e1e;
+}
+h4::before {
+  content: '# ';
+  font-size: 30px;
+}
+.container {
+  text-align: left;
+  padding: 10px;
+  max-width: 1200px;
+  margin: 10px auto 40px auto;
+}
+h3 {
+  margin-bottom: 1px;
+}
+h3::before {
+  content: 'Q: ';
+  color: #7c42da;
+}
+.answer {
+  color: #5c5c5c;
+  margin: 0;
+  margin-left: 10px;
+  display: none;
+  background-color: #ffffe1;
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+.blockP {
+  display: block;
+}
+.answer::before {
+  content: 'A: ';
+  color: #4caf50;
+  display: block;
+}
+
+/* REFERANCE */
+#ref-wrapper {
+  margin-top: 50px;
+}
+#referance-title {
+  margin-bottom: 1px;
+  font-size: 24px;
+  border-top: 1px solid;
+}
+#referance {
+  margin-top: 5px;
+}
+#referance li {
+  font-size: 14px;
+}
+#referance ul li a {
+  color: white;
+}
