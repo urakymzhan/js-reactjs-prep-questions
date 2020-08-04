@@ -1,6 +1,6 @@
 ## Complete JavaScript && ReactJS Interview Questions 📚
 
-![js and reactjs](https://www.shift8web.ca/wp-content/uploads/2019/03/shift8-javascript-port-scanner-2.jpg){height=100px}
+![js and reactjs](https://www.shift8web.ca/wp-content/uploads/2019/03/shift8-javascript-port-scanner-2.jpg =100)
 
 ##### Check this [link](https://urakymzhan.github.io/js-reactjs-prep-questions/) to see questions live
 
