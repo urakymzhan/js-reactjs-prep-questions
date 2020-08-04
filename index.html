@@ -3479,6 +3479,502 @@
           </pre>
         </div>
 
+        <!-- router -->
+        <h4>ReactJS Questions - React Router</h4>
+
+        <h3>What is React Router?</h3>
+        <div class="answer">
+          React Router is a powerful routing library built on top of React that
+          helps you add new screens and flows to your application incredibly
+          quickly, all while keeping the URL in sync with what's being displayed
+          on the page.
+        </div>
+
+        <h3>How React Router is different from history library?</h3>
+        <div class="answer">
+          React Router is a wrapper around the history library which handles
+          interaction with the browser's window.history with its browser and
+          hash histories. It also provides memory history which is useful for
+          environments that don't have global history, such as mobile app
+          development (React Native) and unit testing with Node.
+        </div>
+
+        <h3>What are the &lt;Router> components of React Router v4?</h3>
+        <div class="answer">
+          <pre><code>
+
+              React Router v4 provides below 3 &lt;Router> components:
+
+                  &lt;BrowserRouter>
+                  &lt;HashRouter>
+                  &lt;MemoryRouter>
+
+              The above components will create browser, hash, and memory history instances.
+              React Router v4 makes the properties and methods of the history instance associated with your router available through the context in the router object.
+          </code></pre>
+        </div>
+
+        <h3>What is the purpose of push() and replace() methods of history?</h3>
+        <div class="answer">
+          <pre><code>
+              A history instance has two methods for navigation purpose.
+
+              1. push()
+              2. replace()
+
+              If you think of the history as an array of visited locations, push() will add a new location
+              to the array and replace() will replace the current location in the array with the new one.
+
+          </code></pre>
+        </div>
+
+        <h3>How do you programmatically navigate using React Router v4?</h3>
+        <div class="answer">
+          <pre><code>
+          There are three different ways to achieve programmatic routing/navigation within components.
+
+              1. Using the withRouter() higher-order function:
+
+              The withRouter() higher-order function will inject the history object as a prop of the component. This object provides push() and replace() methods to avoid the usage of context.
+
+              import { withRouter } from 'react-router-dom' // this also works with 'react-router-native'
+
+              const Button = withRouter(({ history }) => (
+              &lt;button
+                  type='button'
+                  onClick={() => { history.push('/new-location') }}
+                  &gt;
+                  {'Click Me!'}
+              &lt;/button&gt;
+              ))
+
+              2. Using &lt;Route&gt; component and render props pattern:
+
+              The &lt;Route&gt; component passes the same props as withRouter(), so you will be able to access the history methods through the history prop.
+
+              import { Route } from 'react-router-dom'
+
+              const Button = () => (
+                  &lt;Route render={({ history }) => (
+                  &lt;button
+                    type='button'
+                    onClick={() => { history.push('/new-location') }}
+                    &gt;
+                    {'Click Me!'}
+                  &lt;/button&gt;
+                )} /&gt;
+              )
+
+              3. Using context:
+
+              This option is not recommended and treated as unstable API.
+
+              const Button = (props, context) => (
+                  &lt;button
+                      type='button'
+                      onClick={() => {
+                      context.history.push('/new-location')
+                      }}
+                      &gt;
+                      {'Click Me!'}
+                  &lt;/button&gt;
+              )
+
+              Button.contextTypes = {
+                history: React.PropTypes.shape({
+                  push: React.PropTypes.func.isRequired
+                })
+              }
+          </code></pre>
+        </div>
+
+        <h3>How to get query parameters in React Router v4?</h3>
+        <div class="answer">
+          <pre><code>
+              The ability to parse query strings was taken out of React Router v4 because there have been user requests over the years to support different implementation. So the decision has been given to users to choose the implementation they like. The recommended approach is to use query strings library.
+
+                  const queryString = require('query-string');
+                  const parsed = queryString.parse(props.location.search);
+
+              You can also use URLSearchParams if you want something native:
+
+                  const params = new URLSearchParams(props.location.search)
+                  const foo = params.get('name')
+
+              You should use a polyfill for IE11.
+
+          </code></pre>
+        </div>
+
+        <h3>What are Pure Components?</h3>
+        <div class="answer">
+          <pre><code>
+              React.PureComponent is exactly the same as React.Component except that it handles the shouldComponentUpdate() method for you.
+              When props or state changes, PureComponent will do a shallow comparison on both props and state.
+              Component on the other hand won't compare current props and state to next out of the box.
+              Thus, the component will re-render by default whenever shouldComponentUpdate is called.
+          </code></pre>
+        </div>
+
+        <h3>Why you get "Router may have only one child element" warning?</h3>
+        <div class="answer">
+          <pre><code>
+
+              You have to wrap your Route's in a &lt;Switch&gt; block because &lt;Switch&gt; is unique in that it renders a route exclusively.
+
+                  At first you need to add Switch to your imports:
+
+                  import { Switch, Router, Route } from 'react-router'
+                  Then define the routes within &lt;Switch&gt; block:
+
+                  &lt;Router&gt;
+                      &lt;Switch&gt;
+                          &lt;Route {/* ... */} /&gt;
+                          &lt;Route {/* ... */} /&gt;
+                      &lt;/Switch>
+                  &lt;/Router&gt;
+
+          </code></pre>
+        </div>
+
+        <h3>How to pass params to history.push method in React Router v4?</h3>
+        <div class="answer">
+          <pre><code>
+              While navigating you can pass props to the history object:
+
+                  this.props.history.push({
+                  pathname: '/template',
+                  search: '?name=sudheer',
+                  state: { detail: response.data }
+                  })
+
+              The search property is used to pass query params in push() method.
+
+          </code></pre>
+        </div>
+
+        <h3>How to implement default or NotFound page?</h3>
+        <div class="answer">
+          <pre><code>
+              A &lt;Switch&gt; renders the first child &lt;Route&gt; that matches. A &lt;Route&gt; with no path always matches.
+               So you just need to simply drop path attribute as below
+
+                  &lt;Switch&gt;
+                      &lt;Route exact path="/" component={Home}/&gt;
+                      &lt;Route path="/user" component={User}/&gt;
+                      &lt;Route component={NotFound} /&gt;
+                  &lt;/Switch&gt;
+
+          </code></pre>
+        </div>
+
+        <h3>How to get history on React Router v4?</h3>
+        <div class="answer">
+          <pre><code>
+          Below are the list of steps to get history object on React Router v4,
+
+              1. Create a module that exports a history object and import this module across the project.
+
+                  For example, create history.js file:
+
+                  import { createBrowserHistory } from 'history'
+
+                  export default createBrowserHistory({
+                  /* pass a configuration object here if needed */
+                  })
+
+              2. You should use the &lt;Router&gt; component instead of built-in routers. Imported the above history.js inside index.js file:
+
+                  import { Router } from 'react-router-dom'
+                  import history from './history'
+                  import App from './App'
+
+                  ReactDOM.render((
+                  &lt;Router history={history}&gt;
+                      &lt;App /&gt;
+                  &lt;/Router&gt;
+                  ), holder)
+
+              3. You can also use push method of history object similar to built-in history object:
+
+                  // some-other-file.js
+                  import history from './history'
+
+                  history.push('/go-here')
+
+          </code></pre>
+        </div>
+
+        <h3>How to perform automatic redirect after login?</h3>
+        <div class="answer">
+          <pre><code>
+
+              The react-router package provides &lt;Redirect&gt; component in React Router.
+              Rendering a &lt;Redirect&gt; will navigate to a new location.
+              Like server-side redirects, the new location will override the current location in the history stack.
+
+                  import React, { Component } from 'react'
+                  import { Redirect } from 'react-router'
+
+                  export default class LoginComponent extends Component {
+                    render() {
+                      if (this.state.isLoggedIn === true) {
+                        return &lt;Redirect to="/your/redirect/page" /&gt;
+                      } else {
+                        return &lt;div>{'Login Please'}&lt;/div&gt;
+                      }
+                    }
+                  }
+          </code></pre>
+        </div>
+
+        <h4>React Questions - Testing</h4>
+
+        <h3>What is Shallow Renderer in React testing?</h3>
+        <div class="answer">
+          <pre><code>
+                  Shallow rendering is useful for writing unit test cases in React. It lets you render a component one level deep and assert facts about what its render method returns, without worrying about the behavior of child components, which are not instantiated or rendered.
+
+                  For example, if you have the following component:
+
+                      function MyComponent() {
+                      return (
+                          &lt;div&gt;
+                              &lt;span className={'heading'}&gt;{'Title'}&lt;/span&gt;
+                              &lt;span className={'description'}&gt;{'Description'}&lt;/span&gt;
+                          &lt;/div&gt;
+                      )
+                      }
+
+                  Then you can assert as follows:
+
+                      import ShallowRenderer from 'react-test-renderer/shallow'
+
+                      // in your test
+                      const renderer = new ShallowRenderer()
+                      renderer.render(&lt;MyComponent /&gt;)
+
+                      const result = renderer.getRenderOutput()
+
+                      expect(result.type).toBe('div')
+                      expect(result.props.children).toEqual([
+                          &lt;span className={'heading'}&gt;{'Title'}&lt;/span&gt;,
+                          &lt;span className={'description'}&gt;{'Description'}&lt;/span&gt;
+                      ])
+
+              </code></pre>
+        </div>
+
+        <h3>What is TestRenderer package in React?</h3>
+        <div class="answer">
+          <pre><code>
+
+                  This package provides a renderer that can be used to render components to pure JavaScript objects, without depending on the DOM or a native mobile environment. This package makes it easy to grab a snapshot of the platform view hierarchy (similar to a DOM tree) rendered by a ReactDOM or React Native without using a browser or jsdom.
+
+                      import TestRenderer from 'react-test-renderer'
+
+                      const Link = ({page, children}) => &lt;a href={page}&gt;{children}&lt;/a&gt;
+
+                      const testRenderer = TestRenderer.create(
+                          &lt;Link page={'https://www.facebook.com/'}&gt;{'Facebook'}&lt;/Link&gt;
+                      )
+
+                      console.log(testRenderer.toJSON())
+                      // {
+                      //   type: 'a',
+                      //   props: { href: 'https://www.facebook.com/' },
+                      //   children: [ 'Facebook' ]
+                      // }
+
+              </code></pre>
+        </div>
+
+        <h3>What is the purpose of ReactTestUtils package?</h3>
+        <div class="answer">
+          ReactTestUtils are provided in the with-addons package and allow you
+          to perform actions against a simulated DOM for the purpose of unit
+          testing.
+        </div>
+
+        <h3>What is Jest?</h3>
+        <div class="answer">
+          Jest is a JavaScript unit testing framework created by Facebook based
+          on Jasmine and provides automated mock creation and a jsdom
+          environment. It's often used for testing components.
+        </div>
+
+        <h3>What are the advantages of Jest over Jasmine?</h3>
+        <div class="answer">
+          There are couple of advantages compared to Jasmine:<br />
+
+          - Automatically finds tests to execute in your source code.<br />
+          - Automatically mocks dependencies when running your tests.<br />
+          - Allows you to test asynchronous code synchronously.<br />
+          - Runs your tests with a fake DOM implementation (via jsdom) so that
+          your tests can be run on the command line.<br />
+          - Runs tests in parallel processes so that they finish sooner.<br />
+        </div>
+
+        <h3>Give a simple example of Jest test case ?</h3>
+        <div class="answer">
+          <pre><code>
+
+                  Let's write a test for a function that adds two numbers in sum.js file:
+
+                      const sum = (a, b) => a + b
+
+                      export default sum
+
+                  Create a file named sum.test.js which contains actual test:
+
+                      import sum from './sum'
+
+                      test('adds 1 + 2 to equal 3', () => {
+                      expect(sum(1, 2)).toBe(3)
+                      })
+
+                  And then add the following section to your package.json:
+
+                      {
+                      "scripts": {
+                          "test": "jest"
+                      }
+                      }
+
+                  Finally, run yarn test or npm test and Jest will print a result:
+
+                      $ yarn test
+                      PASS ./sum.test.js
+                      ✓ adds 1 + 2 to equal 3 (2ms)
+
+              </code></pre>
+        </div>
+
+        <h4>React Questions - Miscellaneous</h4>
+
+        <h3>Open to see a lot of other questions</h3>
+        <div class="answer">
+          <pre><code>
+                  Give an example of reselect usage?
+                  Does the statics object work with ES6 classes in React?
+                  Can Redux only be used with React?
+                  Do you need to have a particular build tool to use Redux?
+                  How Redux Form initialValues get updated from state?
+                  How React PropTypes allow different type for one prop?
+                  Can I import an SVG file as react component?
+                  Why are inline ref callbacks or functions not recommended?
+                  What is render hijacking in React?
+                  What are HOC factory implementations?
+                  How to pass numbers to React component?
+                  Do I need to keep all my state into Redux? Should I ever use react internal state?
+                  What is the purpose of registerServiceWorker in React?
+                  What is React memo function?
+                  What is React lazy function?
+                  How to prevent unnecessary updates using setState?
+                  How do you render Array, Strings and Numbers in React 16 Version?
+                  How to use class field declarations syntax in React classes?
+                  What are hooks?
+                  What are the rules needs to follow for hooks?
+                  How to ensure hooks followed the rules in your project?
+                  What are the differences between Flux and Redux?
+                  What are the benefits of React Router V4?
+                  Can you describe about componentDidCatch lifecycle method signature?
+                  In which scenarios error boundaries do not catch errors?
+                  Why do not you need error boundaries for event handlers?
+                  What is the difference between try catch block and error boundaries?
+                  What is the behavior of uncaught errors in react 16?
+                  What is the proper placement for error boundaries?
+                  What is the benefit of component stack trace from error boundary?
+                  What is the required method to be defined for a class component?
+                  What are the possible return types of render method?
+                  What is the main purpose of constructor?
+                  Is it mandatory to define constructor for React component?
+                  What are default props?
+                  Why should not call setState in componentWillUnmount?
+                  What is the purpose of getDerivedStateFromError?
+                  What is the methods order when component re-rendered?
+                  What are the methods invoked during error handling?
+                  What is the purpose of displayName class property?
+                  What is the browser support for react applications?
+                  What is the purpose of unmountComponentAtNode method?
+                  What is code-splitting?
+                  What is the benefit of strict mode?
+                  What are Keyed Fragments?
+                  Does React support all HTML attributes?
+                  What are the limitations with HOCs?
+                  How to debug forwardRefs in DevTools?
+                  When component props defaults to true?
+                  What is NextJS and major features of it?
+                  How do you pass an event handler to a component?
+                  Is it good to use arrow functions in render methods?
+                  How to prevent a function from being called multiple times?
+                  How JSX prevents Injection Attacks?
+                  How do you update rendered elements?
+                  How do you say that props are read only?
+                  How do you say that state updates are merged?
+                  How do you pass arguments to an event handler?
+                  How to prevent component from rendering?
+                  What are the conditions to safely use the index as a key?
+                  Is it keys should be globally unique?
+                  What is the popular choice for form handling?
+                  What are the advantages of formik over redux form library?
+                  Why do you not required to use inheritance?
+                  Can I use web components in react application?
+                  What is dynamic import?
+                  What are loadable components?
+                  What is suspense component?
+                  What is route based code splitting?
+                  Give an example on How to use context?
+                  What is the purpose of default value in context?
+                  How do you use contextType?
+                  What is a consumer?
+                  How do you solve performance corner cases while using context?
+                  What is the purpose of forward ref in HOCs?
+                  Is it ref argument available for all functions or class components?
+                  Why do you need additional care for component libraries while using forward refs?
+                  How to create react class components without ES6?
+                  Is it possible to use react without JSX?
+                  What is diffing algorithm?
+                  What are the rules covered by diffing algorithm?
+                  When do you need to use refs?
+                  Is it prop must be named as render for render props?
+                  What are the problems of using render props with pure components?
+                  How do you create HOC using render props?
+                  What is windowing technique?
+                  How do you print falsy values in JSX?
+                  What is the typical use case of portals?
+                  How do you set default value for uncontrolled component?
+                  What is your favorite React stack?
+                  What is the difference between Real DOM and Virtual DOM?
+                  How to add Bootstrap to a react application?
+                  Can you list down top websites or applications using react as front end framework?
+                  Is it recommended to use CSS In JS technique in React?
+                  Do I need to rewrite all my class components with hooks?
+                  How to fetch data with React Hooks?
+                  Is Hooks cover all use cases for classes?
+                  What is the stable release for hooks support?
+                  Why do we use array destructuring (square brackets notation) in useState?
+                  What are the sources used for introducing hooks?
+                  How do you access imperative API of web components?
+                  What is formik?
+                  What are typical middleware choices for handling asynchronous calls in Redux?
+                  Do browsers understand JSX code?
+                  Describe about data flow in react?
+                  What is react scripts?
+                  What are the features of create react app?
+                  What is the purpose of renderToNodeStream method?
+                  What is MobX?
+                  What are the differences between Redux and MobX?
+                  Should I learn ES6 before learning ReactJS?
+                  What is Concurrent Rendering?
+                  What is the difference between async mode and concurrent mode?
+                  Can I use javascript urls in react16.9?
+                  What is the purpose of eslint plugin for hooks?
+                  What is the difference between Imperative and Declarative in React?
+                  What are the benefits of using typescript with reactjs?
+                </code></pre>
+        </div>
+
         <div class="nav">
           If you are interested in <i>HTML</i> and <i>CSS</i> questions. Click
           this
