@@ -74,11 +74,11 @@ h3::before {
 /* REFERANCE */
 #ref-wrapper {
   margin-top: 50px;
+  border-top: 1px solid;
 }
 #referance-title {
   margin-bottom: 1px;
   font-size: 24px;
-  border-top: 1px solid;
 }
 #referance {
   margin-top: 5px;
@@ -95,4 +95,19 @@ h3::before {
   text-align: center;
   font-weight: 900;
   font-size: 20px;
+}
+
+.side-notes {
+  color: yellowgreen;
+  margin-left: 15px;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.nav-wrapper a {
+  text-decoration: none;
+  color: gray;
 }
