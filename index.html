@@ -908,7 +908,7 @@
               </code></pre>
         </div>
 
-        <!-- <div class="nav-wrapper">
+        <div class="nav-wrapper">
           <h4 id="react">
             ReactJS Questions - Concepts
           </h4>
@@ -946,14 +946,14 @@
           <pre><code>
                   JSX is a XML-like syntax extension to ECMAScript (the acronym stands for JavaScript XML).
                   Basically it just provides syntactic sugar for the React.createElement() function, giving us expressiveness of JavaScript along with HTML like template syntax.
-                  In the example below text inside &lt;h1> tag is returned as JavaScript function to the render function.
+                  In the example below text inside &lt;h1&gt; tag is returned as JavaScript function to the render function.
 
                       class App extends React.Component {
                           render() {
                               return(
-                                &lt;div>
-                                  &lt;h1>{'Welcome to React world!'}&lt;/h1>
-                                &lt;/div>
+                                &lt;div&gt;
+                                  &lt;h1&gt;{'Welcome to React world!'}&lt;/h1&gt;
+                                &lt;/div&gt;
                               )
                           }
                       }
@@ -984,13 +984,13 @@
                     }
                   }
                   - And finally it renders to the DOM using ReactDOM.render():
-                    &lt;div>Login&lt;/div>
+                    &lt;div&gt;Login&lt;/div&gt;
 
                   - Whereas a component can be declared in several different ways.
                   - It can be a class with a render() method. Alternatively, in simple cases, it can be defined as a function. In either case, it takes props as an input, and returns a JSX tree as the output:
 
                   const Button = ({ onLogin }) =>
-                  &lt;div id={'login-btn'} onClick={onLogin}>Login&lt;/div>
+                  &lt;div id={'login-btn'} onClick={onLogin}&gt;Login&lt;/div&gt;
                   Then JSX gets transpiled to a React.createElement() function tree:
 
                   const Button = ({ onLogin }) => React.createElement(
@@ -1011,7 +1011,7 @@
                   - Those are pure JavaScript functions that accept props object as first parameter and return React elements:
 
                   function Greeting({ message }) {
-                    return &lt;h1>{`Hello, ${message}`}&lt;/h1>
+                    return &lt;h1&gt;{`Hello, ${message}`}&lt;/h1&gt;
 
                   }
                   ----------------
@@ -1020,7 +1020,7 @@
 
                   class Greeting extends React.Component {
                     render() {
-                      return &lt;h1>{`Hello, ${this.props.message}`}&lt;/h1>
+                      return &lt;h1&gt;{`Hello, ${this.props.message}`}&lt;/h1&gt;
                     }
                   }
               </code></pre>
@@ -1065,9 +1065,9 @@
 
                       render() {
                           return (
-                          &lt;div>
-                              &lt;h1>{this.state.message}&lt;/h1>
-                          &lt;/div>
+                          &lt;div&gt;
+                              &lt;h1&gt;{this.state.message}&lt;/h1&gt;
+                          &lt;/div&gt;
                           )
                       }
                   }
@@ -1095,7 +1095,7 @@
           Use via this.props.reactProp inside component's render() method.<br />
           For example, let us create an element with reactProp property:
           <pre><code>
-                  &lt;Element reactProp={'1'} />
+                  &lt;Element reactProp={'1'} /&gt;
 
                   This reactProp (or whatever you came up with) name then becomes a property attached to React's native props object which originally already exists on all components created using React library.
                   props.reactProp
@@ -1147,13 +1147,13 @@
           handling,
           <pre><code>
                       1. In HTML, the event name should be in lowercase:
-                          &lt;button onclick='activateLasers()'>
+                          &lt;button onclick='activateLasers()'&gt;
                           - Whereas in React it follows camelCase convention:
 
-                          &lt;button onClick={activateLasers}>
+                          &lt;button onClick={activateLasers}&gt;
 
                       2. In HTML, you can return false to prevent default behavior:
-                          &lt;a href='#' onclick='console.log("The link was clicked."); return false;' />
+                          &lt;a href='#' onclick='console.log("The link was clicked."); return false;' /&gt;
                           - Whereas in React you must call preventDefault() explicitly:
 
                           function handleClick(event) {
@@ -1187,15 +1187,15 @@
                       handleClick = () => {
                           console.log('this is:', this)
                       }
-                      &lt;button onClick={this.handleClick}>
+                      &lt;button onClick={this.handleClick}&gt;
                           {'Click me'}
-                      &lt;/button>
+                      &lt;/button&gt;
 
                   3. Arrow functions in callbacks: You can use arrow functions directly in the callbacks.
 
-                      &lt;button onClick={(event) => this.handleClick(event)}>
+                      &lt;button onClick={(event) => this.handleClick(event)}&gt;
                           {'Click me'}
-                      &lt;/button>
+                      &lt;/button&gt;
               </code>
           </pre>
           Note: If the callback is passed as prop to child components, those
@@ -1209,13 +1209,13 @@
           You can use an arrow function to wrap around an event handler and pass
           parameters:
           <pre><code>
-                      &lt;button onClick={() => this.handleClick(id)} />
+                      &lt;button onClick={() => this.handleClick(id)} /&gt;
                   This is an equivalent to calling .bind:
 
-                      &lt;button onClick={this.handleClick.bind(this, id)} />
+                      &lt;button onClick={this.handleClick.bind(this, id)} /&gt;
                   Apart from these two approaches, you can also pass arguments to a function which is defined as array function
 
-                      &lt;button onClick={this.handleClick(id)} />
+                      &lt;button onClick={this.handleClick(id)} /&gt;
                       handleClick = (id) => () => {
                           console.log("Hello, your ticket number is", id)
                       };
@@ -1238,16 +1238,16 @@
           by wrapping them in curly braces and then followed by JS logical
           operator &&.
           <pre><code>
-                      &lt;h1>Hello!&lt;/h1>
+                      &lt;h1&gt;Hello!&lt;/h1&gt;
                       {
                           messages.length > 0 && !isLogin?
-                          &lt;h2>
+                          &lt;h2&gt;
                               You have {messages.length} unread messages.
-                          &lt;/h2>
+                          &lt;/h2&gt;
                           :
-                          &lt;h2>
+                          &lt;h2&gt;
                               You don't have unread messages.
-                          &lt;/h2>
+                          &lt;/h2&gt;
                       }
               </code></pre>
         </div>
@@ -1264,17 +1264,17 @@
           Most often we use ID from our data as key:
           <pre><code>
                       const todoItems = todos.map((todo) =>
-                      &lt;li key={todo.id}>
+                      &lt;li key={todo.id}&gt;
                           {todo.text}
-                      &lt;/li>
+                      &lt;/li&gt;
                       )
 
                   When you don't have stable IDs for rendered items, you may use the item index as a key as a last resort:
 
                       const todoItems = todos.map((todo, index) =>
-                      &lt;li key={index}>
+                      &lt;li key={index}&gt;
                           {todo.text}
-                      &lt;/li>
+                      &lt;/li&gt;
                       )
               </code></pre>
           Note:<br />
@@ -1307,7 +1307,7 @@
                           this.myRef = React.createRef()
                       }
                       render() {
-                          return &lt;div ref={this.myRef} />
+                          return &lt;div ref={this.myRef} /&gt;
                       }
                       }
 
@@ -1330,7 +1330,7 @@
                               &lt;input
                                   value={this.state.term}
                                   onChange={this.onInputChange.bind(this)}
-                                  ref={this.setInputSearchRef} />
+                                  ref={this.setInputSearchRef} /&gt;
                           );
                       }
                       }
@@ -1346,14 +1346,14 @@
           receive, and pass it further down to a child.
           <pre><code>
                   const ButtonElement = React.forwardRef((props, ref) => (
-                      &lt;button ref={ref} className="CustomButton">
+                      &lt;button ref={ref} className="CustomButton"&gt;
                           {props.children}
-                      &lt;/button>
+                      &lt;/button&gt;
                   ));
 
                   // Create ref to the DOM button:
                   const ref = React.createRef();
-                  &lt;ButtonElement ref={ref}>{'Forward Ref'}&lt;/ButtonElement>
+                  &lt;ButtonElement ref={ref}&gt;{'Forward Ref'}&lt;/ButtonElement&gt;
 
               </code></pre>
         </div>
@@ -1440,13 +1440,13 @@
 
                       render() {
                           return (
-                          &lt;form onSubmit={this.handleSubmit}>
-                              &lt;label>
+                          &lt;form onSubmit={this.handleSubmit}&gt;
+                              &lt;label&gt;
                               {'Name:'}
-                              &lt;input type="text" ref={this.input} />
-                              &lt;/label>
-                              &lt;input type="submit" value="Submit" />
-                          &lt;/form>
+                              &lt;input type="text" ref={this.input} /&gt;
+                              &lt;/label&gt;
+                              &lt;input type="submit" value="Submit" /&gt;
+                          &lt;/form&gt;
                           );
                       }
                       }
@@ -1563,15 +1563,15 @@
 
                   const MyDiv = React.createClass({
                     render: function() {
-                      return &lt;div>{this.props.children}&lt;/div>
+                      return &lt;div&gt;{this.props.children}&lt;/div&gt;
                     }
                   })
 
                   ReactDOM.render(
-                      &lt;MyDiv>
-                          &lt;span>{'Hello'}&lt;/span>
-                          &lt;span>{'World'}&lt;/span>
-                      &lt;/MyDiv>,
+                      &lt;MyDiv&gt;
+                          &lt;span&gt;{'Hello'}&lt;/span&gt;
+                          &lt;span&gt;{'World'}&lt;/span&gt;
+                      &lt;/MyDiv&gt;,
                       node
                   )
 
@@ -1586,18 +1586,18 @@
 
                   Single-line comments:
 
-                      &lt;div>
+                      &lt;div&gt;
                       {/* Single-line comments(In vanilla JavaScript, the single-line comments are represented by double slash(//)) */}
                       {`Welcome ${user}, let's play React`}
-                      &lt;/div>
+                      &lt;/div&gt;
 
                   Multi-line comments:
 
-                      &lt;div>
+                      &lt;div&gt;
                           {/* Multi-line comments for more than
                           one line */}
                           {`Welcome ${user}, let's play React`}
-                      &lt;/div>
+                      &lt;/div&gt;
 
               </code></pre>
         </div>
@@ -1712,7 +1712,7 @@
                   Pass a string as the className prop.
 
                   render() {
-                    return &lt;span className={'menu navigation-menu'}>{'Menu'}&lt;/span>
+                    return &lt;span className={'menu navigation-menu'}&gt;{'Menu'}&lt;/span&gt;
                   }
 
               </code></pre>
@@ -1726,22 +1726,22 @@
 
                   render() {
                     return (
-                      &lt;React.Fragment>
-                          &lt;ChildA />
-                          &lt;ChildB />
-                          &lt;ChildC />
-                      &lt;/React.Fragment>
+                      &lt;React.Fragment&gt;
+                          &lt;ChildA /&gt;
+                          &lt;ChildB /&gt;
+                          &lt;ChildC /&gt;
+                      &lt;/React.Fragment&gt;
                     )
                   }
                   There is also a shorter syntax, but it's not supported in many tools:
 
                   render() {
                     return (
-                      &lt;>
-                          &lt;ChildA />
-                          &lt;ChildB />
-                          &lt;ChildC />
-                      &lt;/>
+                      &lt;&gt;
+                          &lt;ChildA /&gt;
+                          &lt;ChildB /&gt;
+                          &lt;ChildC /&gt;
+                      &lt;/&gt;
                     )
                   }
               </code></pre>
@@ -1849,10 +1849,10 @@
 
                     render() {
                       return (
-                          &lt;>
-                              &lt;h1>{`Welcome, ${this.props.name}`}&lt;/h1>
-                              &lt;h2>{`Age, ${this.props.age}`}&lt;/h2>
-                          &lt;/>
+                          &lt;&gt;
+                              &lt;h1&gt;{`Welcome, ${this.props.name}`}&lt;/h1&gt;
+                              &lt;h2&gt;{`Age, ${this.props.age}`}&lt;/h2&gt;
+                          &lt;/&gt;
                       )
                     }
                   }
@@ -1916,7 +1916,7 @@
                           render() {
                               if (this.state.hasError) {
                                   // You can render any custom fallback UI
-                                  return &lt;h1>{'Something went wrong.'}&lt;/h1>
+                                  return &lt;h1&gt;{'Something went wrong.'}&lt;/h1&gt;
                               }
                               return this.props.children
                           }
@@ -1924,9 +1924,9 @@
 
                   After that use it as a regular component:
 
-                  &lt;ErrorBoundary>
-                      &lt;MyWidget />
-                  &lt;/ErrorBoundary>
+                  &lt;ErrorBoundary&gt;
+                      &lt;MyWidget /&gt;
+                  &lt;/ErrorBoundary&gt;
 
               </code></pre>
         </div>
@@ -1990,10 +1990,10 @@
                       import MyPage from './MyPage'
 
                       app.get('/', (req, res) => {
-                      res.write('&lt;!DOCTYPE html>&lt;html>&lt;head>&lt;title>My Page&lt;/title>&lt;/head>&lt;body>')
-                      res.write('&lt;div id="content">')
-                      res.write(renderToString(&lt;MyPage/>))
-                      res.write('&lt;/div>&lt;/body>&lt;/html>')
+                      res.write('&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;My Page&lt;/title&gt;&lt;/head&gt;&lt;body&gt;')
+                      res.write('&lt;div id="content"&gt;')
+                      res.write(renderToString(&lt;MyPage/&gt;))
+                      res.write('&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;')
                       res.end()
                       })
               </code></pre>
@@ -2029,7 +2029,7 @@
                       };
 
                       function HelloWorldComponent() {
-                      return &lt;div style={divStyle}>Hello World!&lt;/div>
+                      return &lt;div style={divStyle}&gt;Hello World!&lt;/div&gt;
                       }
 
                   Style keys are camelCased in order to be consistent with accessing the properties on DOM nodes in JavaScript (e.g. node.style.backgroundImage).
@@ -2069,7 +2069,7 @@
                           &lt;Todo
                               {...todo}
                               key={index}
-                          />
+                          /&gt;
                       )}
 
                   If you use element data for unique key, assuming todo.id is unique to this list and stable,
@@ -2077,7 +2077,7 @@
 
                       {todos.map((todo) =>
                           &lt;Todo {...todo}
-                              key={todo.id} />
+                              key={todo.id} /&gt;
                       )}
 
               </code></pre>
@@ -2127,7 +2127,7 @@
                     }
 
                     render() {
-                      return &lt;div>{this.state.inputValue}&lt;/div>
+                      return &lt;div&gt;{this.state.inputValue}&lt;/div&gt;
                     }
                   }
 
@@ -2143,7 +2143,7 @@
                     }
 
                     render() {
-                      return &lt;div>{this.props.inputValue}&lt;/div>
+                      return &lt;div&gt;{this.props.inputValue}&lt;/div&gt;
                     }
                   }
 
@@ -2160,24 +2160,24 @@
 
 
                       const MyComponent = ({ name, address }) => (
-                          &lt;div>
-                              &lt;h2>{name}&lt;/h2>
+                          &lt;div&gt;
+                              &lt;h2&gt;{name}&lt;/h2&gt;
                               {address &&
-                                  &lt;p>{address}&lt;/p>
+                                  &lt;p&gt;{address}&lt;/p&gt;
                               }
-                          &lt;/div>
+                          &lt;/div&gt;
                       )
 
                   If you need an if-else condition then use ternary operator.
 
                       const MyComponent = ({ name, address }) => (
-                          &lt;div>
-                              &lt;h2>{name}&lt;/h2>
+                          &lt;div&gt;
+                              &lt;h2&gt;{name}&lt;/h2&gt;
                               {address
-                              ? &lt;p>{address}&lt;/p>
-                              : &lt;p>{'Address is not available'}&lt;/p>
+                              ? &lt;p&gt;{address}&lt;/p&gt;
+                              : &lt;p&gt;{'Address is not available'}&lt;/p&gt;
                               }
-                          &lt;/div>
+                          &lt;/div&gt;
                       )
 
               </code></pre>
@@ -2192,10 +2192,10 @@
                   For example,
 
                       const ComponentA = () =>
-                          &lt;ComponentB isDisplay={true} className={'componentStyle'} />
+                          &lt;ComponentB isDisplay={true} className={'componentStyle'} /&gt;
 
                       const ComponentB = ({ isDisplay, ...domProps }) =>
-                          &lt;div {...domProps}>{'ComponentB'}&lt;/div>
+                          &lt;div {...domProps}&gt;{'ComponentB'}&lt;/div&gt;
 
               </code></pre>
         </div>
@@ -2209,7 +2209,7 @@
                       import ReactDOMServer from 'react-dom/server'
                       import App from './App'
 
-                      ReactDOMServer.renderToString(&lt;App />)
+                      ReactDOMServer.renderToString(&lt;App /&gt;)
 
                   This method will output the regular HTML as a string, which can be then placed inside a page body as part of the server response. On the client side,
                   React detects the pre-rendered content and seamlessly picks up where it left off.
@@ -2352,7 +2352,7 @@
 
                       class myComponent extends Component {
                           render() {
-                              return &lt;div />
+                              return &lt;div /&gt;
                           }
                       }
 
@@ -2441,17 +2441,17 @@
 
                   For example, the items array of objects is mapped into an array of components:
 
-                      &lt;tbody>
-                          {items.map(item => &lt;SomeComponent key={item.id} name={item.name} />)}
-                      &lt;/tbody>
+                      &lt;tbody&gt;
+                          {items.map(item => &lt;SomeComponent key={item.id} name={item.name} /&gt;)}
+                      &lt;/tbody&gt;
 
                   But you can't iterate using for loop:
 
-                      &lt;tbody>
+                      &lt;tbody&gt;
                           for (let i = 0; i &lt; items.length; i++) {
-                              &lt;SomeComponent key={items[i].id} name={items[i].name} />
+                              &lt;SomeComponent key={items[i].id} name={items[i].name} /&gt;
                           }
-                      &lt;/tbody>
+                      &lt;/tbody&gt;
 
 
               </code></pre>
@@ -2480,14 +2480,14 @@
           <pre><code>
                   You shouldn't use curly braces inside quotes because it is going to be evaluated as a string.
 
-                      &lt;div className="btn-panel {this.props.visible ? 'show' : 'hidden'}">
+                      &lt;div className="btn-panel {this.props.visible ? 'show' : 'hidden'}"&gt;
 
                   Instead you need to move curly braces outside (don't forget to include spaces between class names):
 
-                      &lt;div className={'btn-panel ' + (this.props.visible ? 'show' : 'hidden')}>
+                      &lt;div className={'btn-panel ' + (this.props.visible ? 'show' : 'hidden')}&gt;
                       Template strings will also work:
 
-                      &lt;div className={`btn-panel ${this.props.visible ? 'show' : 'hidden'}`}>
+                      &lt;div className={`btn-panel ${this.props.visible ? 'show' : 'hidden'}`}&gt;
 
               </code></pre>
         </div>
@@ -2544,10 +2544,10 @@
                       return []
                       }
                       render() {
-                      return &lt;React.Fragment>&lt;/React.Fragment>
+                      return &lt;React.Fragment&gt;&lt;/React.Fragment&gt;
                       }
                       render() {
-                      return &lt;>&lt;/>
+                      return &lt;&gt;&lt;/&gt;
                       }
 
                   Returning undefined won't work.
@@ -2616,7 +2616,7 @@
 
                   render(){
                      return (
-                          &lt;obj.component /> // `React.createElement(obj.component)`
+                          &lt;obj.component /&gt; // `React.createElement(obj.component)`
                         )
                   }
 
@@ -2643,7 +2643,7 @@
 
                   1. Create ref in render method:
 
-                      &lt;input ref={input => this.inputElement = input} />
+                      &lt;input ref={input => this.inputElement = input} /&gt;
 
                   2. Apply click event in your event handler:
 
@@ -2766,14 +2766,11 @@
           The below component uses render prop which returns a React element.
           <pre><code>
                       &lt;DataProvider render={data => (
-                          &lt;h1>{`Hello ${data.target}`}&lt;/h1>
-                      )}/>
+                          &lt;h1&gt;{`Hello ${data.target}`}&lt;/h1&gt;
+                      )}/&gt;
               </code></pre>
           Libraries such as React Router and DownShift are using this pattern.
         </div>
-
-
-
 
         <h4>ReactJS Questions - Redux</h4>
 
@@ -2909,8 +2906,8 @@
 
                       render() {
                           return this.props.isLoaded
-                          ? &lt;div>{'Loaded'}&lt;/div>
-                          : &lt;div>{'Not Loaded'}&lt;/div>
+                          ? &lt;div&gt;{'Loaded'}&lt;/div&gt;
+                          : &lt;div&gt;{'Not Loaded'}&lt;/div&gt;
                       }
                       }
 
@@ -3250,7 +3247,7 @@
           <pre><code>
                       import ConnectedComponent from './containers/ConnectedComponent';
 
-                      &lt;ConnectedComponent user={'john'} />
+                      &lt;ConnectedComponent user={'john'} /&gt;
 
                   The ownProps inside your mapStateToProps() and mapDispatchToProps() functions will be an object:
 
@@ -3480,7 +3477,7 @@
                       }
               </code>
           </pre>
-        </div> -->
+        </div>
 
         <div class="nav">
           If you are interested in <i>HTML</i> and <i>CSS</i> questions. Click
