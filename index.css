@@ -34,7 +34,7 @@ main {
   border-radius: 5px;
 }
 h4 {
-  color: #e54e1e;
+  color: #2196f3;
 }
 h4::before {
   content: '# ';
@@ -50,7 +50,7 @@ h3 {
   margin-bottom: 1px;
 }
 h3::before {
-  content: 'Q: ';
+  content: '❓ ';
   color: #7c42da;
 }
 .answer {
@@ -66,7 +66,7 @@ h3::before {
   display: block;
 }
 .answer::before {
-  content: 'A: ';
+  content: '🙋 ';
   color: #4caf50;
   display: block;
 }

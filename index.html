@@ -8,16 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS && ReactJS Prep Questions</title>
     <!-- github css -->
-    <!-- <link rel="stylesheet" type="text/css" href="urakymzhan/index.css" /> -->
+    <link rel="stylesheet" type="text/css" href="urakymzhan/index.css" />
     <!-- local css -->
     <link rel="stylesheet" type="text/css" href="index.css" />
-    <!-- highlights.js -->
+    <!-- highlights -->
     <link rel="stylesheet" href="/highlight/styles/agate.css" />
     <script src="/highlight/highlight.pack.js"></script>
     <script>
       hljs.initHighlightingOnLoad();
     </script>
-
     <!-- google fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
@@ -71,14 +70,382 @@
           <pre><code>typeof [] also an object. typeof null also an object</code></pre>
         </div>
 
+        <h3>
+          What is NaN? What is its type? How can you reliably test if a value is
+          equal to NaN?
+        </h3>
+        <div class="answer">
+          <pre><code>
+            NaN === NaN // ? why?
+            isNaN();
+          </code></pre>
+        </div>
+
+        <h3>
+          How to you explain closure?
+        </h3>
+        <div class="answer">
+          Closures is simply the ability of a function at the time of
+          declaration to remember the references of variables and parameters on
+          its current scope, on its parent function scope, on its parent's
+          parent function scope until it reaches the global scope with the help
+          of Scope Chain. Basically it is the Scope created when the function
+          was declared. <br />
+          Examples are a great way to explain closures.
+          <pre><code>
+            var globalVar = "global";
+            var outerVar = "outer"
+
+            function outerFunc(outerParam) {
+              function innerFunc(innerParam) {
+                console.log(globalVar, outerParam, innerParam);
+              }
+              return innerFunc;
+            }
+
+            const x = outerFunc(outerVar);
+            outerVar = "outer-2";
+            globalVar = "guess"
+            x("inner");
+          </code></pre>
+          This will print "guess outer inner". The explanation for this is that
+          when we invoke the outerFunc function and assigned the returned value
+          the innerFunc function to the variable x, the outerParam will have a
+          value of outer even though we assign a new value outer-2 to the
+          outerVar variable because the reassignment happened after the
+          invocation of the outer function and in that time when we invoke the
+          outerFunc function it's look up the value of outerVar in the Scope
+          Chain, the outerVar will have a value of "outer".<br />
+          Now, when we invoke the x variable which have a reference to the
+          innerFunc, the innerParam will have a value of inner because thats the
+          value we pass in the invocation and the globalVar variable will have a
+          value of guess because before the invocation of the x variable we
+          assign a new value to the globalVar and at the time of invocation x
+          the value of globalVar in the_Scope Chain_ is guess.
+        </div>
+
+        <h3>
+          What is debounce?
+        </h3>
+        <div class="answer">
+          Debouncing a function ensures that it doesn’t get called too
+          frequently. Usually we don't write a custom debounce function and use
+          the "lodash" version, which is great Example
+          <a
+            href="https://www.tutorialspoint.com/what-is-debouncing-in-javascript"
+            target="_blank"
+            >here</a
+          >
+        </div>
+
+        <h3>
+          The data types supported by JavaScript are?
+        </h3>
+        <div class="answer">
+          <pre><code>
+            Undefined
+            Null
+            Boolean
+            String
+            Symbol
+            Number
+            Object
+          </code></pre>
+        </div>
+
+        <h3>
+          Explain var, let, const?
+        </h3>
+        <div class="answer">
+          In Javascript one can define variables using the keywords var, let or
+          const.
+          <pre><code>
+            var a=10;
+            let b=20;
+            const PI=3.14;
+          </code></pre>
+          <i>var:</i> The scope of a variable defined with the keyword “var” is
+          limited to the “function” within which it is defined. If it is defined
+          outside any function, the scope of the variable is global. var is
+          “function scoped”.<br />
+          <i>let:</i> The scope of a variable defined with the keyword “let” or
+          “const” is limited to the “block” defined by curly braces i.e. {} .
+          “let” and “const” are“block scoped”.<br />
+          <i>const:</i> The scope of a variable defined with the keyword “const”
+          is limited to the block defined by curly braces. However if a variable
+          is defined with keyword const, it cannot be reassigned. “const” cannot
+          be re-assigned to a new value. However it CAN be mutated.
+        </div>
+
+        <h3>
+          What is the difference between the operators ‘==‘ & ‘===‘?
+        </h3>
+        <div class="answer">
+          === and !== are strict comparison operators: <br />
+
+          JavaScript has both strict and type-converting equality comparison.
+          For strict equality the objects being compared must have the same type
+          and:<br />
+
+          Two strings are strictly equal when they have the same sequence of
+          characters, same length, and same characters in corresponding
+          positions.<br />
+          Two numbers are strictly equal when they are numerically equal (have
+          the same number value). NaN is not equal to anything, including NaN.
+          Positive and negative zeros are equal to one another.<br />
+          Two Boolean operands are strictly equal if both are true or both are
+          false.<br />
+          Two objects are strictly equal if they refer to the same Object.<br />
+          Null and Undefined types are == (but not ===). [I.e. (Null==Undefined)
+          is true but (Null===Undefined) is false]<br />
+          Example:
+          <pre><code>
+            0 == false   // true
+            0 === false  // false, because they are of a different type
+            1 == "1"     // true, automatic type conversion for value only
+            1 === "1"    // false, because they are of a different type
+            null == undefined // true
+            null === undefined // false
+            '0' == false // true
+            '0' === false // false
+          </code></pre>
+          Check docs at
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators"
+            target="_blank"
+            >MDN</a
+          >
+        </div>
+
+        <h3>
+          Explain bind, call, apply. Give Samples
+        </h3>
+        <div class="answer">
+          Check explanation and examples
+          <a
+            href="https://www.codementor.io/@niladrisekhardutta/how-to-call-apply-and-bind-in-javascript-8i1jca6jp"
+            target="_blank"
+            >here</a
+          >
+        </div>
+
+        <h3>
+          What is the difference between undefined and not defined in
+          JavaScript?
+        </h3>
+        <div class="answer">
+          - not defined - instance is not declared and used;<br />
+          - undefined - instance declared and used without its value.<br />
+          <pre><code>
+            alert(a) // Here a is not defined.
+
+            alert(a); // Here a is undefined because javascript engine convert this code to
+            var a=10
+
+            var a;
+            alert(a); // that's why `a` is defined here
+            a=10;
+
+          </code></pre>
+          Check examples
+          <a
+            href="https://codeburst.io/javascript-null-vs-undefined-20f955215a2"
+            target="_blank"
+            >here</a
+          >
+        </div>
+
+        <h3>
+          What is Big O notation, and why is it useful?
+        </h3>
+        <div class="answer">
+          Check explanation and examples
+          <a
+            href="https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/"
+            target="_blank"
+            >here</a
+          >
+        </div>
+
+        <h3>
+          What is the event loop? Can you draw a simple diagram to explain event
+          loop?
+        </h3>
+        <div class="answer">
+          Check explanation and examples
+          <a
+            href="https://flaviocopes.com/javascript-event-loop/"
+            target="_blank"
+            >here</a
+          >
+        </div>
+
+        <h3>
+          If and website is slow how what would you do to make it faster?
+        </h3>
+        <div class="answer">
+          Check explanation and examples
+          <a
+            href="https://tenbagroup.com/13-tips-on-how-to-make-a-website-load-faster/"
+            target="_blank"
+            >here</a
+          >
+        </div>
+
+        <!-- DOM Practice Questions -->
+        <h4>JavaScript Questions - DOM</h4>
+
+        <h3>
+          What is the DOM?
+        </h3>
+        <div class="answer">
+          Check explanation and examples
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction"
+            target="_blank"
+            >here</a
+          >
+        </div>
+
+        <h3>
+          What is event bubbling and how does it work?
+        </h3>
+        <div class="answer">
+          Check explanation and examples
+          <a
+            href="https://www.sitepoint.com/event-bubbling-javascript/"
+            target="_blank"
+            >here</a
+          >
+        </div>
+
+        <h3>
+          Is there any difference between window and document?
+        </h3>
+        <div class="answer">
+          Check explanation and examples
+          <a
+            href="https://stackoverflow.com/questions/9895202/what-is-the-difference-between-window-screen-and-document-in-javascript#:~:text=Well%2C%20the%20window%20is%20the,gets%20loaded%20into%20the%20browser.&text=The%20document%20object%20is%20your,%2C%20URL%2C%20cookie%2C%20etc."
+            target="_blank"
+            >here</a
+          >
+        </div>
+
+        <h3>
+          Does document.onload and window.onload fire at the same time?
+        </h3>
+        <div class="answer">
+          Check explanation and examples
+          <a
+            href="https://stackoverflow.com/questions/588040/window-onload-vs-document-onload"
+            target="_blank"
+            >here</a
+          >
+        </div>
+
+        <h3>
+          Is attribute similar to property?
+        </h3>
+        <div class="answer">
+          Check explanation and examples
+          <a
+            href="https://javascript.info/dom-attributes-and-properties"
+            target="_blank"
+            >here</a
+          >
+        </div>
+
+        <h3>
+          How could you prevent a click on an anchor from going to the link?
+        </h3>
+        <div class="answer">
+          Using preventDefault() <br />
+          Check explanation and examples
+          <a
+            href="https://www.techiedelight.com/enable-disable-anchor-tag-with-javascript/#:~:text=To%20prevent%20an%20anchor%20from,HTML"
+            target="_blank"
+            >here</a
+          >
+        </div>
+
+        <h3>
+          What are the different ways to get an element from DOM? Differences?
+        </h3>
+        <div class="answer">
+          Check explanation and examples
+          <a
+            href="https://www.khanacademy.org/computing/computer-programming/html-css-js/html-js-dom-access/a/summary-dom-access-methods"
+            target="_blank"
+            >here</a
+          >
+        </div>
+
+        <h3>
+          Create a function that, given a DOM Element on the page, will visit
+          the element itself and all of its descendents (not just its immediate
+          children). For each element visited, the function should pass that
+          element to a provided callback function. The arguments to the function
+          should be: a DOM element a callback function (that takes a DOM element
+          as its argument)
+        </h3>
+        <div class="answer">
+          <pre><code>
+          function Traverse(p_element,p_callback) {
+            p_callback(p_element);
+            var list = p_element.children;
+            for (var i = 0; i < list.length; i++) {
+                Traverse(list[i],p_callback);  // recursive call
+            }
+         }
+        </code></pre>
+        </div>
+
+        <h3>More questions - TODO!!!</h3>
+        <div class="answer">
+          <pre><code>
+            How could I verify whether one element is child of another?
+            After getting all elements with classname="seytech" can i use .forEach? How about .map?
+            Get element with id 'seytech' and add classname "bootcamp" to that element
+            If you need to implement getElementByAttribute, how would you implement it?
+            What is the fastest way to select elements by using css selectors?
+            How come, I can't use forEach or similar array methods on a NodeList?
+            If you need to implement getElementByAttribute, how would you implement it?
+            How would you add a class to an element by query selector?
+            How could I verify whether one element is child of another?
+            What is the best way to create a DOM element? Set innherHTML or use createElement?
+            What is createDocumentFragment and why you might use it?
+            What is reflow? What causes reflow? How could you reduce reflow?
+            What is repaint and when does this happen?
+            How could you make sure to run some JavaScript when DOM is ready like $(document).ready?
+            What is event bubble? How does event flows in DOM?
+            How could you capture all clicks in a page?
+            How can you get all the texts in a web page?
+            What is debounce and how could you implement debounce?
+            If and website is slow how what would you do to make it faster?
+          </code></pre>
+        </div>
+        <!-- JavaScript Practice Questions -->
+        <h4>JavaScript Questions - Practice</h4>
+        <h3>
+          How to empty an Array in JavaScript?
+        </h3>
+        <div class="answer">
+          <pre><code>
+            arrayList = [],
+            arrayList.length = 0;
+            arrayList.splice(0, arrayList.length);
+            while(arrayList.length) { arrayList.pop() }
+          </code></pre>
+        </div>
+
         <!-- ReactJS Questions -->
         <h4>ReactJS Questions</h4>
 
         <h3>
-          What are the different versions of CSS? Which one you use right now?
+          TODO - Coming Soon!
         </h3>
         <div class="answer">
-          Different versions of CSS are:
+          Coming Soon!
         </div>
 
         <div class="nav">
