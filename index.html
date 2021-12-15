@@ -1,100 +1,99 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="JS && ReactJS Prep Questions" />
-    <meta name="keywords" content="JavaScrpt, React, Interview, Questions" />
-    <meta name="author" content="Ulan Rakymzhanov for Seytech School" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS && ReactJS Prep Questions</title>
-    <!-- github css -->
-    <!-- <link rel="stylesheet" type="text/css" href="urakymzhan/index.css" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="JS && ReactJS Prep Questions" />
+  <meta name="keywords" content="JavaScrpt, React, Interview, Questions" />
+  <meta name="author" content="Ulan Rakymzhanov for Seytech School" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JS && ReactJS Prep Questions</title>
+  <!-- github css -->
+  <!-- <link rel="stylesheet" type="text/css" href="urakymzhan/index.css" />
     <link rel="stylesheet" href="urakymzhan/highlight/styles/agate.css" />
     <script src="urakymzhan/highlight/highlight.pack.js"></script> -->
 
-    <!-- local css -->
-    <link rel="stylesheet" type="text/css" href="index.css" />
-    <!-- highlights -->
-    <link rel="stylesheet" href="agate.css" />
-    <!-- google fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <em>© Seytech Students</em>
-    <main>
-      <h1 id="title">
-        <span style="color: #795548;">JavaScript </span> &&
-        <span style="color: #795548;">ReactJS</span> Interview Preparation
-        Questions<br />
-        <span id="note">Click on questions to unlock the answers</span>
-      </h1>
+  <!-- local css -->
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <!-- highlights -->
+  <link rel="stylesheet" href="agate.css" />
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet" />
+</head>
 
-      <div class="container">
-        <div class="nav-wrapper">
-          <h4>JavaScript Questions - Concepts</h4>
+<body>
+  <em>@Ulan Rakymzhanov</em>
+  <main>
+    <h1 id="title">
+      <span style="color: #795548;">JavaScript </span> &&
+      <span style="color: #795548;">ReactJS</span> Interview Preparation
+      Questions<br />
+      <span id="note">Click on questions to unlock the answers</span>
+    </h1>
 
-          <a href="#react"> GO TO REACT QUESTIONS </a>
-        </div>
+    <div class="container">
+      <div class="nav-wrapper">
+        <h4>JavaScript Questions - Concepts</h4>
 
-        <h3>What is functional programming?</h3>
-        <div class="answer">
-          Functional Programming produces programs by composing mathematical
-          functions and avoids shared state & mutable data.
-          <pre><code>Terms: Pure functions, Avoid side-effects, higher order functions</code></pre>
-        </div>
+        <a href="#react"> GO TO REACT QUESTIONS </a>
+      </div>
 
-        <h3>
-          What is asynchronous programming, and why is it important in
-          JavaScript?
-        </h3>
-        <div class="answer">
-          Synchronous programming means that, barring conditionals and function
-          calls, code is executed sequentially from top-to-bottom, blocking on
-          long-running tasks such as network requests and disk I/O.<br />
-          Asynchronous programming means that the engine runs in an event loop.
-          <br />When a blocking operation is needed, the request is started, and
-          the code keeps running without blocking for the result. <br />When the
-          response is ready, an interrupt is fired, which causes an event
-          handler to be run, where the control flow continues.<br />
-          In this way, a single program thread can handle many concurrent
-          operations.<br />
-          <pre><code>Terms: top-to-bottom, blocking, event loop</code></pre>
-        </div>
+      <h3>What is functional programming?</h3>
+      <div class="answer">
+        Functional Programming produces programs by composing mathematical
+        functions and avoids shared state & mutable data.
+        <pre><code>Terms: Pure functions, Avoid side-effects, higher order functions</code></pre>
+      </div>
 
-        <h3>
-          What is a potential pitfall with using typeof bar === "object" to
-          determine if bar is an object? How can this pitfall be avoided?
-        </h3>
-        <div class="answer">
-          <pre><code>typeof [] also an object. typeof null also an object</code></pre>
-        </div>
+      <h3>
+        What is asynchronous programming, and why is it important in
+        JavaScript?
+      </h3>
+      <div class="answer">
+        Synchronous programming means that, barring conditionals and function
+        calls, code is executed sequentially from top-to-bottom, blocking on
+        long-running tasks such as network requests and disk I/O.<br />
+        Asynchronous programming means that the engine runs in an event loop.
+        <br />When a blocking operation is needed, the request is started, and
+        the code keeps running without blocking for the result. <br />When the
+        response is ready, an interrupt is fired, which causes an event
+        handler to be run, where the control flow continues.<br />
+        In this way, a single program thread can handle many concurrent
+        operations.<br />
+        <pre><code>Terms: top-to-bottom, blocking, event loop</code></pre>
+      </div>
 
-        <h3>
-          What is NaN? What is its type? How can you reliably test if a value is
-          equal to NaN?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        What is a potential pitfall with using typeof bar === "object" to
+        determine if bar is an object? How can this pitfall be avoided?
+      </h3>
+      <div class="answer">
+        <pre><code>typeof [] also an object. typeof null also an object</code></pre>
+      </div>
+
+      <h3>
+        What is NaN? What is its type? How can you reliably test if a value is
+        equal to NaN?
+      </h3>
+      <div class="answer">
+        <pre><code>
             NaN === NaN // ? why?
             isNaN();
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          How to you explain closure?
-        </h3>
-        <div class="answer">
-          Closures is simply the ability of a function at the time of
-          declaration to remember the references of variables and parameters on
-          its current scope, on its parent function scope, on its parent's
-          parent function scope until it reaches the global scope with the help
-          of Scope Chain. Basically it is the Scope created when the function
-          was declared. <br />
-          Examples are a great way to explain closures.
-          <pre><code>
+      <h3>
+        How to you explain closure?
+      </h3>
+      <div class="answer">
+        Closures is simply the ability of a function at the time of
+        declaration to remember the references of variables and parameters on
+        its current scope, on its parent function scope, on its parent's
+        parent function scope until it reaches the global scope with the help
+        of Scope Chain. Basically it is the Scope created when the function
+        was declared. <br />
+        Examples are a great way to explain closures.
+        <pre><code>
             var globalVar = "global";
             var outerVar = "outer"
 
@@ -110,41 +109,37 @@
             globalVar = "guess"
             x("inner");
           </code></pre>
-          This will print "guess outer inner". The explanation for this is that
-          when we invoke the outerFunc function and assigned the returned value
-          the innerFunc function to the variable x, the outerParam will have a
-          value of outer even though we assign a new value outer-2 to the
-          outerVar variable because the reassignment happened after the
-          invocation of the outer function and in that time when we invoke the
-          outerFunc function it's look up the value of outerVar in the Scope
-          Chain, the outerVar will have a value of "outer".<br />
-          Now, when we invoke the x variable which have a reference to the
-          innerFunc, the innerParam will have a value of inner because thats the
-          value we pass in the invocation and the globalVar variable will have a
-          value of guess because before the invocation of the x variable we
-          assign a new value to the globalVar and at the time of invocation x
-          the value of globalVar in the_Scope Chain_ is guess.
-        </div>
+        This will print "guess outer inner". The explanation for this is that
+        when we invoke the outerFunc function and assigned the returned value
+        the innerFunc function to the variable x, the outerParam will have a
+        value of outer even though we assign a new value outer-2 to the
+        outerVar variable because the reassignment happened after the
+        invocation of the outer function and in that time when we invoke the
+        outerFunc function it's look up the value of outerVar in the Scope
+        Chain, the outerVar will have a value of "outer".<br />
+        Now, when we invoke the x variable which have a reference to the
+        innerFunc, the innerParam will have a value of inner because thats the
+        value we pass in the invocation and the globalVar variable will have a
+        value of guess because before the invocation of the x variable we
+        assign a new value to the globalVar and at the time of invocation x
+        the value of globalVar in the_Scope Chain_ is guess.
+      </div>
 
-        <h3>
-          What is debounce?
-        </h3>
-        <div class="answer">
-          Debouncing a function ensures that it doesn’t get called too
-          frequently. Usually we don't write a custom debounce function and use
-          the "lodash" version, which is great Example
-          <a
-            href="https://www.tutorialspoint.com/what-is-debouncing-in-javascript"
-            target="_blank"
-            >here</a
-          >
-        </div>
+      <h3>
+        What is debounce?
+      </h3>
+      <div class="answer">
+        Debouncing a function ensures that it doesn’t get called too
+        frequently. Usually we don't write a custom debounce function and use
+        the "lodash" version, which is great Example
+        <a href="https://www.tutorialspoint.com/what-is-debouncing-in-javascript" target="_blank">here</a>
+      </div>
 
-        <h3>
-          The data types supported by JavaScript are?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        The data types supported by JavaScript are?
+      </h3>
+      <div class="answer">
+        <pre><code>
             Undefined
             Null
             Boolean
@@ -153,55 +148,55 @@
             Number
             Object
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          Explain var, let, const?
-        </h3>
-        <div class="answer">
-          In Javascript one can define variables using the keywords var, let or
-          const.
-          <pre><code>
+      <h3>
+        Explain var, let, const?
+      </h3>
+      <div class="answer">
+        In Javascript one can define variables using the keywords var, let or
+        const.
+        <pre><code>
             var a=10;
             let b=20;
             const PI=3.14;
           </code></pre>
-          <i>var:</i> The scope of a variable defined with the keyword “var” is
-          limited to the “function” within which it is defined. If it is defined
-          outside any function, the scope of the variable is global. var is
-          “function scoped”.<br />
-          <i>let:</i> The scope of a variable defined with the keyword “let” or
-          “const” is limited to the “block” defined by curly braces i.e. {} .
-          “let” and “const” are“block scoped”.<br />
-          <i>const:</i> The scope of a variable defined with the keyword “const”
-          is limited to the block defined by curly braces. However if a variable
-          is defined with keyword const, it cannot be reassigned. “const” cannot
-          be re-assigned to a new value. However it CAN be mutated.
-        </div>
+        <i>var:</i> The scope of a variable defined with the keyword “var” is
+        limited to the “function” within which it is defined. If it is defined
+        outside any function, the scope of the variable is global. var is
+        “function scoped”.<br />
+        <i>let:</i> The scope of a variable defined with the keyword “let” or
+        “const” is limited to the “block” defined by curly braces i.e. {} .
+        “let” and “const” are“block scoped”.<br />
+        <i>const:</i> The scope of a variable defined with the keyword “const”
+        is limited to the block defined by curly braces. However if a variable
+        is defined with keyword const, it cannot be reassigned. “const” cannot
+        be re-assigned to a new value. However it CAN be mutated.
+      </div>
 
-        <h3>
-          What is the difference between the operators ‘==‘ & ‘===‘?
-        </h3>
-        <div class="answer">
-          === and !== are strict comparison operators: <br />
+      <h3>
+        What is the difference between the operators ‘==‘ & ‘===‘?
+      </h3>
+      <div class="answer">
+        === and !== are strict comparison operators: <br />
 
-          JavaScript has both strict and type-converting equality comparison.
-          For strict equality the objects being compared must have the same type
-          and:<br />
+        JavaScript has both strict and type-converting equality comparison.
+        For strict equality the objects being compared must have the same type
+        and:<br />
 
-          Two strings are strictly equal when they have the same sequence of
-          characters, same length, and same characters in corresponding
-          positions.<br />
-          Two numbers are strictly equal when they are numerically equal (have
-          the same number value). NaN is not equal to anything, including NaN.
-          Positive and negative zeros are equal to one another.<br />
-          Two Boolean operands are strictly equal if both are true or both are
-          false.<br />
-          Two objects are strictly equal if they refer to the same Object.<br />
-          Null and Undefined types are == (but not ===). [I.e. (Null==Undefined)
-          is true but (Null===Undefined) is false]<br />
-          Example:
-          <pre><code>
+        Two strings are strictly equal when they have the same sequence of
+        characters, same length, and same characters in corresponding
+        positions.<br />
+        Two numbers are strictly equal when they are numerically equal (have
+        the same number value). NaN is not equal to anything, including NaN.
+        Positive and negative zeros are equal to one another.<br />
+        Two Boolean operands are strictly equal if both are true or both are
+        false.<br />
+        Two objects are strictly equal if they refer to the same Object.<br />
+        Null and Undefined types are == (but not ===). [I.e. (Null==Undefined)
+        is true but (Null===Undefined) is false]<br />
+        Example:
+        <pre><code>
             0 == false   // true
             0 === false  // false, because they are of a different type
             1 == "1"     // true, automatic type conversion for value only
@@ -211,34 +206,27 @@
             '0' == false // true
             '0' === false // false
           </code></pre>
-          Check docs at
-          <a
-            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators"
-            target="_blank"
-            >MDN</a
-          >
-        </div>
+        Check docs at
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators" target="_blank">MDN</a>
+      </div>
 
-        <h3>
-          Explain bind, call, apply. Give Samples
-        </h3>
-        <div class="answer">
-          Check explanation and examples
-          <a
-            href="https://www.codementor.io/@niladrisekhardutta/how-to-call-apply-and-bind-in-javascript-8i1jca6jp"
-            target="_blank"
-            >here</a
-          >
-        </div>
+      <h3>
+        Explain bind, call, apply. Give Samples
+      </h3>
+      <div class="answer">
+        Check explanation and examples
+        <a href="https://www.codementor.io/@niladrisekhardutta/how-to-call-apply-and-bind-in-javascript-8i1jca6jp"
+          target="_blank">here</a>
+      </div>
 
-        <h3>
-          What is the difference between undefined and not defined in
-          JavaScript?
-        </h3>
-        <div class="answer">
-          - not defined - instance is not declared and used;<br />
-          - undefined - instance declared and used without its value.<br />
-          <pre><code>
+      <h3>
+        What is the difference between undefined and not defined in
+        JavaScript?
+      </h3>
+      <div class="answer">
+        - not defined - instance is not declared and used;<br />
+        - undefined - instance declared and used without its value.<br />
+        <pre><code>
             alert(a) // Here a is not defined.
 
             alert(a); // Here a is undefined because javascript engine convert this code to
@@ -249,148 +237,109 @@
             a=10;
 
           </code></pre>
-          Check examples
-          <a
-            href="https://codeburst.io/javascript-null-vs-undefined-20f955215a2"
-            target="_blank"
-            >here</a
-          >
-        </div>
+        Check examples
+        <a href="https://codeburst.io/javascript-null-vs-undefined-20f955215a2" target="_blank">here</a>
+      </div>
 
-        <h3>
-          What is Big O notation, and why is it useful?
-        </h3>
-        <div class="answer">
-          Check explanation and examples
-          <a
-            href="https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/"
-            target="_blank"
-            >here</a
-          >
-        </div>
+      <h3>
+        What is Big O notation, and why is it useful?
+      </h3>
+      <div class="answer">
+        Check explanation and examples
+        <a href="https://www.freecodecamp.org/news/big-o-notation-why-it-matters-and-why-it-doesnt-1674cfa8a23c/"
+          target="_blank">here</a>
+      </div>
 
-        <h3>
-          What is the event loop? Can you draw a simple diagram to explain event
-          loop?
-        </h3>
-        <div class="answer">
-          Check explanation and examples
-          <a
-            href="https://flaviocopes.com/javascript-event-loop/"
-            target="_blank"
-            >here</a
-          >
-        </div>
+      <h3>
+        What is the event loop? Can you draw a simple diagram to explain event
+        loop?
+      </h3>
+      <div class="answer">
+        Check explanation and examples
+        <a href="https://flaviocopes.com/javascript-event-loop/" target="_blank">here</a>
+      </div>
 
-        <h3>
-          If and website is slow how what would you do to make it faster?
-        </h3>
-        <div class="answer">
-          Check explanation and examples
-          <a
-            href="https://tenbagroup.com/13-tips-on-how-to-make-a-website-load-faster/"
-            target="_blank"
-            >here</a
-          >
-        </div>
+      <h3>
+        If and website is slow how what would you do to make it faster?
+      </h3>
+      <div class="answer">
+        Check explanation and examples
+        <a href="https://tenbagroup.com/13-tips-on-how-to-make-a-website-load-faster/" target="_blank">here</a>
+      </div>
 
-        <h4>JavaScript Questions - DOM</h4>
+      <h4>JavaScript Questions - DOM</h4>
 
-        <h3>
-          What is the DOM?
-        </h3>
-        <div class="answer">
-          Check explanation and examples
-          <a
-            href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction"
-            target="_blank"
-            >here</a
-          >
-        </div>
+      <h3>
+        What is the DOM?
+      </h3>
+      <div class="answer">
+        Check explanation and examples
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction"
+          target="_blank">here</a>
+      </div>
 
-        <h3>
-          What is event bubbling and how does it work?
-        </h3>
-        <div class="answer">
-          Check explanation and examples
-          <a
-            href="https://www.sitepoint.com/event-bubbling-javascript/"
-            target="_blank"
-            >here</a
-          >
-        </div>
+      <h3>
+        What is event bubbling and how does it work?
+      </h3>
+      <div class="answer">
+        Check explanation and examples
+        <a href="https://www.sitepoint.com/event-bubbling-javascript/" target="_blank">here</a>
+      </div>
 
-        <h3>
-          Is there any difference between window and document?
-        </h3>
-        <div class="answer">
-          Check explanation and examples
-          <a
-            href="https://stackoverflow.com/questions/9895202/what-is-the-difference-between-window-screen-and-document-in-javascript#:~:text=Well%2C%20the%20window%20is%20the,gets%20loaded%20into%20the%20browser.&text=The%20document%20object%20is%20your,%2C%20URL%2C%20cookie%2C%20etc."
-            target="_blank"
-            >here</a
-          >
-        </div>
+      <h3>
+        Is there any difference between window and document?
+      </h3>
+      <div class="answer">
+        Check explanation and examples
+        <a href="https://stackoverflow.com/questions/9895202/what-is-the-difference-between-window-screen-and-document-in-javascript#:~:text=Well%2C%20the%20window%20is%20the,gets%20loaded%20into%20the%20browser.&text=The%20document%20object%20is%20your,%2C%20URL%2C%20cookie%2C%20etc."
+          target="_blank">here</a>
+      </div>
 
-        <h3>
-          Does document.onload and window.onload fire at the same time?
-        </h3>
-        <div class="answer">
-          Check explanation and examples
-          <a
-            href="https://stackoverflow.com/questions/588040/window-onload-vs-document-onload"
-            target="_blank"
-            >here</a
-          >
-        </div>
+      <h3>
+        Does document.onload and window.onload fire at the same time?
+      </h3>
+      <div class="answer">
+        Check explanation and examples
+        <a href="https://stackoverflow.com/questions/588040/window-onload-vs-document-onload" target="_blank">here</a>
+      </div>
 
-        <h3>
-          Is attribute similar to property?
-        </h3>
-        <div class="answer">
-          Check explanation and examples
-          <a
-            href="https://javascript.info/dom-attributes-and-properties"
-            target="_blank"
-            >here</a
-          >
-        </div>
+      <h3>
+        Is attribute similar to property?
+      </h3>
+      <div class="answer">
+        Check explanation and examples
+        <a href="https://javascript.info/dom-attributes-and-properties" target="_blank">here</a>
+      </div>
 
-        <h3>
-          How could you prevent a click on an anchor from going to the link?
-        </h3>
-        <div class="answer">
-          Using preventDefault() <br />
-          Check explanation and examples
-          <a
-            href="https://www.techiedelight.com/enable-disable-anchor-tag-with-javascript/#:~:text=To%20prevent%20an%20anchor%20from,HTML"
-            target="_blank"
-            >here</a
-          >
-        </div>
+      <h3>
+        How could you prevent a click on an anchor from going to the link?
+      </h3>
+      <div class="answer">
+        Using preventDefault() <br />
+        Check explanation and examples
+        <a href="https://www.techiedelight.com/enable-disable-anchor-tag-with-javascript/#:~:text=To%20prevent%20an%20anchor%20from,HTML"
+          target="_blank">here</a>
+      </div>
 
-        <h3>
-          What are the different ways to get an element from DOM? Differences?
-        </h3>
-        <div class="answer">
-          Check explanation and examples
-          <a
-            href="https://www.khanacademy.org/computing/computer-programming/html-css-js/html-js-dom-access/a/summary-dom-access-methods"
-            target="_blank"
-            >here</a
-          >
-        </div>
+      <h3>
+        What are the different ways to get an element from DOM? Differences?
+      </h3>
+      <div class="answer">
+        Check explanation and examples
+        <a href="https://www.khanacademy.org/computing/computer-programming/html-css-js/html-js-dom-access/a/summary-dom-access-methods"
+          target="_blank">here</a>
+      </div>
 
-        <h3>
-          Create a function that, given a DOM Element on the page, will visit
-          the element itself and all of its descendents (not just its immediate
-          children). For each element visited, the function should pass that
-          element to a provided callback function. The arguments to the function
-          should be: a DOM element a callback function (that takes a DOM element
-          as its argument)
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        Create a function that, given a DOM Element on the page, will visit
+        the element itself and all of its descendents (not just its immediate
+        children). For each element visited, the function should pass that
+        element to a provided callback function. The arguments to the function
+        should be: a DOM element a callback function (that takes a DOM element
+        as its argument)
+      </h3>
+      <div class="answer">
+        <pre><code>
           function Traverse(p_element,p_callback) {
             p_callback(p_element);
             var list = p_element.children;
@@ -399,235 +348,235 @@
             }
          }
         </code></pre>
-        </div>
+      </div>
 
-        <h3>How could I verify whether one element is child of another?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How could I verify whether one element is child of another?</h3>
+      <div class="answer">
+        <pre><code>
             How could I verify whether one element is child of another?
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          After getting all elements with classname="seytech" can i use
-          .forEach? How about .map?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        After getting all elements with classname="seytech" can i use
+        .forEach? How about .map?
+      </h3>
+      <div class="answer">
+        <pre><code>
              After getting all elements with classname="seytech" can i use .forEach? How about .map?
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          Get element with id 'seytech' and add classname "bootcamp" to that
-          element?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        Get element with id 'seytech' and add classname "bootcamp" to that
+        element?
+      </h3>
+      <div class="answer">
+        <pre><code>
             Get element with id 'seytech' and add classname "bootcamp" to that element
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What is the fastest way to select elements by using css selectors?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        What is the fastest way to select elements by using css selectors?
+      </h3>
+      <div class="answer">
+        <pre><code>
             What is the fastest way to select elements by using css selectors?
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          How come, I can't use forEach or similar array methods on a NodeList?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        How come, I can't use forEach or similar array methods on a NodeList?
+      </h3>
+      <div class="answer">
+        <pre><code>
             How come, I can't use forEach or similar array methods on a NodeList?
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          If you need to implement getElementByAttribute, how would you
-          implement it?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        If you need to implement getElementByAttribute, how would you
+        implement it?
+      </h3>
+      <div class="answer">
+        <pre><code>
             If you need to implement getElementByAttribute, how would you implement it?
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          How would you add a class to an element by query selector?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        How would you add a class to an element by query selector?
+      </h3>
+      <div class="answer">
+        <pre><code>
             How would you add a class to an element by query selector?
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          How could I verify whether one element is child of another?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        How could I verify whether one element is child of another?
+      </h3>
+      <div class="answer">
+        <pre><code>
             How could I verify whether one element is child of another?
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What is the best way to create a DOM element? Set innherHTML or use
-          createElement?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        What is the best way to create a DOM element? Set innherHTML or use
+        createElement?
+      </h3>
+      <div class="answer">
+        <pre><code>
             What is the best way to create a DOM element? Set innherHTML or use createElement?
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What is createDocumentFragment and why you might use it?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        What is createDocumentFragment and why you might use it?
+      </h3>
+      <div class="answer">
+        <pre><code>
             What is createDocumentFragment and why you might use it?
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What is reflow? What causes reflow? How could you reduce reflow?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        What is reflow? What causes reflow? How could you reduce reflow?
+      </h3>
+      <div class="answer">
+        <pre><code>
             What is reflow? What causes reflow? How could you reduce reflow?
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What is repaint and when does this happen?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        What is repaint and when does this happen?
+      </h3>
+      <div class="answer">
+        <pre><code>
             What is repaint and when does this happen?
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          How could you make sure to run some JavaScript when DOM is ready like
-          $(document).ready?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        How could you make sure to run some JavaScript when DOM is ready like
+        $(document).ready?
+      </h3>
+      <div class="answer">
+        <pre><code>
             How could you make sure to run some JavaScript when DOM is ready like $(document).ready?
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What is event bubble? How does event flows in DOM?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        What is event bubble? How does event flows in DOM?
+      </h3>
+      <div class="answer">
+        <pre><code>
             What is event bubble? How does event flows in DOM?
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          How could you capture all clicks in a page?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        How could you capture all clicks in a page?
+      </h3>
+      <div class="answer">
+        <pre><code>
             How could you capture all clicks in a page?
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          How can you get all the texts in a web page?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        How can you get all the texts in a web page?
+      </h3>
+      <div class="answer">
+        <pre><code>
             How can you get all the texts in a web page?
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What is debounce and how could you implement debounce?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        What is debounce and how could you implement debounce?
+      </h3>
+      <div class="answer">
+        <pre><code>
             What is debounce and how could you implement debounce?
           </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          If and website is slow how what would you do to make it faster?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        If and website is slow how what would you do to make it faster?
+      </h3>
+      <div class="answer">
+        <pre><code>
             If and website is slow how what would you do to make it faster?
           </code></pre>
-        </div>
+      </div>
 
-        <h4>JavaScript Questions - Practice</h4>
-        <p class="side-notes">
-          Use <a href="https://repl.it" target="_blank">Repl</a> or any IDE of
-          your choice to solve this challenges
-        </p>
-        <h3>
-          How to empty an Array in JavaScript?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h4>JavaScript Questions - Practice</h4>
+      <p class="side-notes">
+        Use <a href="https://repl.it" target="_blank">Repl</a> or any IDE of
+        your choice to solve this challenges
+      </p>
+      <h3>
+        How to empty an Array in JavaScript?
+      </h3>
+      <div class="answer">
+        <pre><code>
             arrayList = [],
             arrayList.length = 0;
             arrayList.splice(0, arrayList.length);
             while(arrayList.length) { arrayList.pop() }
           </code></pre>
-        </div>
+      </div>
 
-        <h4>JavaScript Questions - Debugging</h4>
-        <p class="side-notes">
-          Use <a href="https://repl.it" target="_blank">Repl</a> or any IDE of
-          your choice to solve this challenges
-        </p>
+      <h4>JavaScript Questions - Debugging</h4>
+      <p class="side-notes">
+        Use <a href="https://repl.it" target="_blank">Repl</a> or any IDE of
+        your choice to solve this challenges
+      </p>
 
-        <h3>What will the code below output to the console and why?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What will the code below output to the console and why?</h3>
+      <div class="answer">
+        <pre><code>
                 (function(){
                     var a = b = 3;
                 })();
                 console.log(a);
                 console.log(b);
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What will the code below output to the console and why?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What will the code below output to the console and why?</h3>
+      <div class="answer">
+        <pre><code>
                   var bar = true;
                   console.log(bar + 0);
                   console.log(bar + "xyz");
                   console.log(bar + true);
                   console.log(bar + false);
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What will the code below output to the console and why?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What will the code below output to the console and why?</h3>
+      <div class="answer">
+        <pre><code>
                 var trees = ["xyz","xxxx","test","ryan","apple"];
                 delete trees[3];
 
                 console.log(trees.length);
               </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          Consider the two functions below. Will they both return the same
-          thing? Why or why not?
-        </h3>
+      <h3>
+        Consider the two functions below. Will they both return the same
+        thing? Why or why not?
+      </h3>
 
-        <div class="answer">
-          <pre><code>
+      <div class="answer">
+        <pre><code>
                   function foo1()
                   {
                     return {
@@ -643,14 +592,14 @@
                     };
                   }
               </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          In what order will the numbers 1-4 be logged to the console when the
-          code below is executed? Why?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        In what order will the numbers 1-4 be logged to the console when the
+        code below is executed? Why?
+      </h3>
+      <div class="answer">
+        <pre><code>
                   (function() {
                       console.log(1);
                       setTimeout(function(){console.log(2)}, 1000);
@@ -658,14 +607,14 @@
                       console.log(4);
                   })();
               </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What gets logged to the console when the user clicks on “Button 4” and
-          why?, fix it pls.
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        What gets logged to the console when the user clicks on “Button 4” and
+        why?, fix it pls.
+      </h3>
+      <div class="answer">
+        <pre><code>
                   for (var i = 0; i < 5; i++) {
                       var btn = document.createElement('button');
                       btn.appendChild(document.createTextNode('Button ' + i));
@@ -673,11 +622,11 @@
                       document.body.appendChild(btn);
                     }
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What will the code below output to the console and why ?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What will the code below output to the console and why ?</h3>
+      <div class="answer">
+        <pre><code>
               console.log(1 +  "2" + "2");
               console.log(1 +  +"2" + "2");
               console.log(1 +  -"1" + "2");
@@ -685,44 +634,44 @@
               console.log( "A" - "B" + "2");
               console.log( "A" - "B" + 2);
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What will be the output of the following code:</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What will be the output of the following code:</h3>
+      <div class="answer">
+        <pre><code>
                   for (var i = 0; i < 5; i++) {
                       setTimeout(function() { console.log(i); }, i * 1000 );
                   }
               </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What would the following lines of code output to the console?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        What would the following lines of code output to the console?
+      </h3>
+      <div class="answer">
+        <pre><code>
               console.log("0 || 1 = "+(0 || 1));
               console.log("1 || 2 = "+(1 || 2));
               console.log("0 && 1 = "+(0 && 1));
               console.log("1 && 2 = "+(1 && 2));
               </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What will be the output when the following code is executed? Explain.
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        What will be the output when the following code is executed? Explain.
+      </h3>
+      <div class="answer">
+        <pre><code>
                   console.log(false == '0')
                   console.log(false === '0')
               </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What is the output out of the following code? Explain your answer.
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        What is the output out of the following code? Explain your answer.
+      </h3>
+      <div class="answer">
+        <pre><code>
               var a={},
               b={key:'b'},
               c={key:'c'};
@@ -732,32 +681,32 @@
 
               console.log(a[b]);
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What will the following code output to the console:</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What will the following code output to the console:</h3>
+      <div class="answer">
+        <pre><code>
                   console.log((function f(n){return ((n > 1) ? n * f(n-1) : n)})(5));
               </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          Consider the code snippet below. What will the console output be and
-          why?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        Consider the code snippet below. What will the console output be and
+        why?
+      </h3>
+      <div class="answer">
+        <pre><code>
                   (function(x) {
                       return (function(y) {
                           console.log(x);
                       })(2)
                   })(1);
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What will the following code output to the console and why:</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What will the following code output to the console and why:</h3>
+      <div class="answer">
+        <pre><code>
                   var hero = {
                       _name: 'John Doe',
                       getSecretIdentity: function (){
@@ -770,11 +719,11 @@
                   console.log(stoleSecretIdentity());
                   console.log(hero.getSecretIdentity());
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is the output of the following code?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is the output of the following code?</h3>
+      <div class="answer">
+        <pre><code>
               var length = 10;
               function fn() {
                 console.log(this.length);
@@ -790,11 +739,11 @@
 
               obj.method(fn, 1);
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What will be the output of this code?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What will be the output of this code?</h3>
+      <div class="answer">
+        <pre><code>
                   var x = 21;
                   var seytech = function () {
                       console.log(x);
@@ -802,11 +751,11 @@
                   };
                   seytech();
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What will the output be, and why?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What will the output be, and why?</h3>
+      <div class="answer">
+        <pre><code>
                   (function () {
                       try {
                           throw new Error();
@@ -818,44 +767,44 @@
                       console.log(y);
                   })();
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What will the output be, and why?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What will the output be, and why?</h3>
+      <div class="answer">
+        <pre><code>
                   for (let i = 0; i < 5; i++) {
                       setTimeout(function() { console.log(i); }, i * 1000 );
                     }
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What will the output be, and why?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What will the output be, and why?</h3>
+      <div class="answer">
+        <pre><code>
               console.log(1 < 2 < 3);
               console.log(3 > 2 > 1);
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What will the output be, and why?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What will the output be, and why?</h3>
+      <div class="answer">
+        <pre><code>
               var a = [1, 2, 3];
               a[10] = 99;
               console.log(a[6]); // ?
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What will the output be, and why?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What will the output be, and why?</h3>
+      <div class="answer">
+        <pre><code>
                   console.log(typeof typeof 1);
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What will the output be, and why?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What will the output be, and why?</h3>
+      <div class="answer">
+        <pre><code>
               var b = 1;
               function outer(){
                   var b = 2
@@ -868,22 +817,22 @@
               }
               outer();
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What will the output be, and why?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What will the output be, and why?</h3>
+      <div class="answer">
+        <pre><code>
                   var output = (function(x) {
                       delete x;
                       return x;
                   })(0);
                   console.log(output);
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What will the output be, and why?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What will the output be, and why?</h3>
+      <div class="answer">
+        <pre><code>
               var X = { Foo : 1 };
               var output = (function() {
                   delete X.foo;
@@ -891,11 +840,11 @@
               })();
               console.log(output);
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What will the output be, and why?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What will the output be, and why?</h3>
+      <div class="answer">
+        <pre><code>
               var salary = "1000$";
 
               (function () {
@@ -906,31 +855,31 @@
                   console.log("My New Salary " + salary);
               })();
               </code></pre>
-        </div>
+      </div>
 
-        <div class="nav-wrapper">
-          <h4 id="react">
-            ReactJS Questions - Concepts
-          </h4>
+      <div class="nav-wrapper">
+        <h4 id="react">
+          ReactJS Questions - Concepts
+        </h4>
 
-          <a href="#title">
-            GO TO JAVASCRIPT QUESTIONS
-          </a>
-        </div>
+        <a href="#title">
+          GO TO JAVASCRIPT QUESTIONS
+        </a>
+      </div>
 
-        <h3>What is React?</h3>
-        <div class="answer">
-          React is an open-source frontend JavaScript library which is used for
-          building user interfaces especially for single page applications.<br />
-          It is used for handling view layer for web and mobile apps. React was
-          created by Jordan Walke, a software engineer working for Facebook.<br />
-          React was first deployed on Facebook's News Feed in 2011 and on
-          Instagram in 2012.
-        </div>
+      <h3>What is React?</h3>
+      <div class="answer">
+        React is an open-source frontend JavaScript library which is used for
+        building user interfaces especially for single page applications.<br />
+        It is used for handling view layer for web and mobile apps. React was
+        created by Jordan Walke, a software engineer working for Facebook.<br />
+        React was first deployed on Facebook's News Feed in 2011 and on
+        Instagram in 2012.
+      </div>
 
-        <h3>What are the major features of React?</h3>
-        <div class="answer">
-          <pre>
+      <h3>What are the major features of React?</h3>
+      <div class="answer">
+        <pre>
             <code>
                   The major features of React are:
                       - It uses VirtualDOM instead of RealDOM considering that RealDOM manipulations are expensive.
@@ -939,11 +888,11 @@
                       - Uses reusable/composable UI components to develop the view.
                   </code>
               </pre>
-        </div>
+      </div>
 
-        <h3>What is JSX?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is JSX?</h3>
+      <div class="answer">
+        <pre><code>
                   JSX is a XML-like syntax extension to ECMAScript (the acronym stands for JavaScript XML).
                   Basically it just provides syntactic sugar for the React.createElement() function, giving us expressiveness of JavaScript along with HTML like template syntax.
                   In the example below text inside &lt;h1&gt; tag is returned as JavaScript function to the render function.
@@ -958,17 +907,17 @@
                           }
                       }
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is the difference between Element and Component?</h3>
-        <div class="answer">
-          - An Element is a plain object describing what you want to appear on
-          the screen in terms of the DOM nodes or other components.<br />
-          - Elements can contain other Elements in their props.<br />
-          - Creating a React element is cheap.<br />
-          - Once an element is created, it is never mutated.<br />
-          - The object representation of React Element would be as follows:<br />
-          <pre><code>
+      <h3>What is the difference between Element and Component?</h3>
+      <div class="answer">
+        - An Element is a plain object describing what you want to appear on
+        the screen in terms of the DOM nodes or other components.<br />
+        - Elements can contain other Elements in their props.<br />
+        - Creating a React element is cheap.<br />
+        - Once an element is created, it is never mutated.<br />
+        - The object representation of React Element would be as follows:<br />
+        <pre><code>
                   const element = React.createElement(
                     'div',
                     {id: 'login-btn'},
@@ -999,11 +948,11 @@
                     'Login'
                   )
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How to create components in React?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to create components in React?</h3>
+      <div class="answer">
+        <pre><code>
                   - There are two possible ways to create a component.
 
                   ----------------
@@ -1024,36 +973,36 @@
                     }
                   }
               </code></pre>
-        </div>
+      </div>
 
-        <h3>When to use a Class Component over a Function Component?</h3>
-        <div class="answer">
-          If the component needs state or lifecycle methods then use class
-          component otherwise use function component.<br />
-          However, from React 16.8 with the addition of Hooks, you could use
-          state , lifecycle methods and other features that were only available
-          in class component right in your function component.
-        </div>
+      <h3>When to use a Class Component over a Function Component?</h3>
+      <div class="answer">
+        If the component needs state or lifecycle methods then use class
+        component otherwise use function component.<br />
+        However, from React 16.8 with the addition of Hooks, you could use
+        state , lifecycle methods and other features that were only available
+        in class component right in your function component.
+      </div>
 
-        <h3>What are Pure Components?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are Pure Components?</h3>
+      <div class="answer">
+        <pre><code>
                   React.PureComponent is exactly the same as React.Component except that it handles the shouldComponentUpdate() method for you.
                   When props or state changes, PureComponent will do a shallow comparison on both props and state.
                   Component on the other hand won't compare current props and state to next out of the box.
                   Thus, the component will re-render by default whenever shouldComponentUpdate is called.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is state in React?</h3>
-        <div class="answer">
-          - State of a component is an object that holds some information that
-          may change over the lifetime of the component.<br />
-          - We should always try to make our state as simple as possible and
-          minimize the number of stateful components.<br />
+      <h3>What is state in React?</h3>
+      <div class="answer">
+        - State of a component is an object that holds some information that
+        may change over the lifetime of the component.<br />
+        - We should always try to make our state as simple as possible and
+        minimize the number of stateful components.<br />
 
-          - Let's create an user component with message state,
-          <pre><code>
+        - Let's create an user component with message state,
+        <pre><code>
                   class User extends React.Component {
                       constructor(props) {
                           super(props)
@@ -1072,49 +1021,49 @@
                       }
                   }
               </code></pre>
-          <img src="./images/state.jpg" />
+        <img src="./images/state.jpg" />
 
-          - State is similar to props, but it is private and fully controlled by
-          the component. i.e,<br />
-          - It is not accessible to any component other than the one that owns
-          and sets it.
-        </div>
+        - State is similar to props, but it is private and fully controlled by
+        the component. i.e,<br />
+        - It is not accessible to any component other than the one that owns
+        and sets it.
+      </div>
 
-        <h3>What are props in React?</h3>
-        <div class="answer">
-          Props are inputs to components. They are single values or objects
-          containing a set of values that are passed to components on creation
-          using a naming convention similar to HTML-tag attributes. They are
-          data passed down from a parent component to a child component.<br />
+      <h3>What are props in React?</h3>
+      <div class="answer">
+        Props are inputs to components. They are single values or objects
+        containing a set of values that are passed to components on creation
+        using a naming convention similar to HTML-tag attributes. They are
+        data passed down from a parent component to a child component.<br />
 
-          The primary purpose of props in React is to provide following
-          component functionality:<br />
+        The primary purpose of props in React is to provide following
+        component functionality:<br />
 
-          Pass custom data to your component.<br />
-          Trigger state changes.<br />
-          Use via this.props.reactProp inside component's render() method.<br />
-          For example, let us create an element with reactProp property:
-          <pre><code>
+        Pass custom data to your component.<br />
+        Trigger state changes.<br />
+        Use via this.props.reactProp inside component's render() method.<br />
+        For example, let us create an element with reactProp property:
+        <pre><code>
                   &lt;Element reactProp={'1'} /&gt;
 
                   This reactProp (or whatever you came up with) name then becomes a property attached to React's native props object which originally already exists on all components created using React library.
                   props.reactProp
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is the difference between state and props?</h3>
-        <div class="answer">
-          Both props and state are plain JavaScript objects. While both of them
-          hold information that influences the output of render, they are
-          different in their functionality with respect to component.<br />
-          Props get passed to the component similar to function parameters
-          whereas state is managed within the component similar to variables
-          declared within a function.
-        </div>
+      <h3>What is the difference between state and props?</h3>
+      <div class="answer">
+        Both props and state are plain JavaScript objects. While both of them
+        hold information that influences the output of render, they are
+        different in their functionality with respect to component.<br />
+        Props get passed to the component similar to function parameters
+        whereas state is managed within the component similar to variables
+        declared within a function.
+      </div>
 
-        <h3>Why should we not update the state directly?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>Why should we not update the state directly?</h3>
+      <div class="answer">
+        <pre><code>
                   If you try to update state directly then it won't re-render the component.
 
                   // Wrong
@@ -1126,26 +1075,26 @@
                   this.setState({ message: 'Hello World' })
                   Note: You can directly assign to the state object either in constructor or using latest javascript's class field declaration syntax
               </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What is the purpose of callback function as an argument of setState()?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        What is the purpose of callback function as an argument of setState()?
+      </h3>
+      <div class="answer">
+        <pre><code>
                   The callback function is invoked when setState finished and the component gets rendered. Since setState() is asynchronous the callback function is used for any post action.
 
                   Note: It is recommended to use lifecycle method rather than this callback function.
 
                   setState({ name: 'John' }, () => console.log('The name has updated and component re-rendered'))
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is the difference between HTML and React event handling?</h3>
-        <div class="answer">
-          Below are some of the main differences between HTML and React event
-          handling,
-          <pre><code>
+      <h3>What is the difference between HTML and React event handling?</h3>
+      <div class="answer">
+        Below are some of the main differences between HTML and React event
+        handling,
+        <pre><code>
                       1. In HTML, the event name should be in lowercase:
                           &lt;button onclick='activateLasers()'&gt;
                           - Whereas in React it follows camelCase convention:
@@ -1163,12 +1112,12 @@
 
                       3. In HTML, you need to invoke the function by appending () Whereas in react you should not append () with the function name. (refer "activateLasers" function in the first point for example)
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How to bind methods or event handlers in JSX callbacks?</h3>
-        <div class="answer">
-          There are 3 possible ways to achieve this:
-          <pre><code>
+      <h3>How to bind methods or event handlers in JSX callbacks?</h3>
+      <div class="answer">
+        There are 3 possible ways to achieve this:
+        <pre><code>
                   1. Binding in Constructor: In JavaScript classes, the methods are not bound by default. The same thing applies for React event handlers defined as class methods. Normally we bind them in constructor.
 
                       class Component extends React.Componenet {
@@ -1198,17 +1147,17 @@
                       &lt;/button&gt;
               </code>
           </pre>
-          Note: If the callback is passed as prop to child components, those
-          components might do an extra re-rendering.<br />
-          In those cases, it is preferred to go with .bind() or public class
-          fields syntax approach considering performance.
-        </div>
+        Note: If the callback is passed as prop to child components, those
+        components might do an extra re-rendering.<br />
+        In those cases, it is preferred to go with .bind() or public class
+        fields syntax approach considering performance.
+      </div>
 
-        <h3>How to pass a parameter to an event handler or callback?</h3>
-        <div class="answer">
-          You can use an arrow function to wrap around an event handler and pass
-          parameters:
-          <pre><code>
+      <h3>How to pass a parameter to an event handler or callback?</h3>
+      <div class="answer">
+        You can use an arrow function to wrap around an event handler and pass
+        parameters:
+        <pre><code>
                       &lt;button onClick={() => this.handleClick(id)} /&gt;
                   This is an equivalent to calling .bind:
 
@@ -1220,24 +1169,24 @@
                           console.log("Hello, your ticket number is", id)
                       };
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are synthetic events in React?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are synthetic events in React?</h3>
+      <div class="answer">
+        <pre><code>
                   SyntheticEvent is a cross-browser wrapper around the browser's native event.
                   It's API is same as the browser's native event, including stopPropagation() and preventDefault(), except the events work identically across all browsers.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are inline conditional expressions?</h3>
-        <div class="answer">
-          You can use either if statements or ternary expressions which are
-          available from JS to conditionally render expressions.<br />
-          Apart from these approaches, you can also embed any expressions in JSX
-          by wrapping them in curly braces and then followed by JS logical
-          operator &&.
-          <pre><code>
+      <h3>What are inline conditional expressions?</h3>
+      <div class="answer">
+        You can use either if statements or ternary expressions which are
+        available from JS to conditionally render expressions.<br />
+        Apart from these approaches, you can also embed any expressions in JSX
+        by wrapping them in curly braces and then followed by JS logical
+        operator &&.
+        <pre><code>
                       &lt;h1&gt;Hello!&lt;/h1&gt;
                       {
                           messages.length > 0 && !isLogin?
@@ -1250,19 +1199,19 @@
                           &lt;/h2&gt;
                       }
               </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What is "key" prop and what is the benefit of using it in arrays of
-          elements?
-        </h3>
-        <div class="answer">
-          A key is a special string attribute you should include when creating
-          arrays of elements.<br />
-          Key prop helps React identify which items have changed, are added, or
-          are removed.<br />
-          Most often we use ID from our data as key:
-          <pre><code>
+      <h3>
+        What is "key" prop and what is the benefit of using it in arrays of
+        elements?
+      </h3>
+      <div class="answer">
+        A key is a special string attribute you should include when creating
+        arrays of elements.<br />
+        Key prop helps React identify which items have changed, are added, or
+        are removed.<br />
+        Most often we use ID from our data as key:
+        <pre><code>
                       const todoItems = todos.map((todo) =>
                       &lt;li key={todo.id}&gt;
                           {todo.text}
@@ -1277,28 +1226,28 @@
                       &lt;/li&gt;
                       )
               </code></pre>
-          Note:<br />
-          1. Using indexes for keys is not recommended if the order of items may
-          change. This can negatively impact performance and may cause issues
-          with component state.<br />
-          2. If you extract list item as separate component then apply keys on
-          list component instead of li tag.<br />
-          3. There will be a warning message in the console if the key prop is
-          not present on list items.<br />
-        </div>
+        Note:<br />
+        1. Using indexes for keys is not recommended if the order of items may
+        change. This can negatively impact performance and may cause issues
+        with component state.<br />
+        2. If you extract list item as separate component then apply keys on
+        list component instead of li tag.<br />
+        3. There will be a warning message in the console if the key prop is
+        not present on list items.<br />
+      </div>
 
-        <h3>What is the use of refs?</h3>
-        <div class="answer">
-          The ref is used to return a reference to the element.<br />
-          They should be avoided in most cases, however, they can be useful when
-          you need a direct access to the DOM element or an instance of a
-          component.
-        </div>
+      <h3>What is the use of refs?</h3>
+      <div class="answer">
+        The ref is used to return a reference to the element.<br />
+        They should be avoided in most cases, however, they can be useful when
+        you need a direct access to the DOM element or an instance of a
+        component.
+      </div>
 
-        <h3>How to create refs?</h3>
-        <div class="answer">
-          There are two approaches
-          <pre><code>
+      <h3>How to create refs?</h3>
+      <div class="answer">
+        There are two approaches
+        <pre><code>
                   1. This is a recently added approach. Refs are created using React.createRef() method and attached to React elements via the ref attribute. In order to use refs throughout the component, just assign the ref to the instance property within constructor.
 
                       class MyComponent extends React.Component {
@@ -1336,15 +1285,15 @@
                       }
                   3. You can also use refs in function components using closures.
               </code></pre>
-          Note: You can also use inline ref callbacks even though it is not a
-          recommended approach
-        </div>
+        Note: You can also use inline ref callbacks even though it is not a
+        recommended approach
+      </div>
 
-        <h3>What are forward refs?</h3>
-        <div class="answer">
-          Ref forwarding is a feature that lets some components take a ref they
-          receive, and pass it further down to a child.
-          <pre><code>
+      <h3>What are forward refs?</h3>
+      <div class="answer">
+        Ref forwarding is a feature that lets some components take a ref they
+        receive, and pass it further down to a child.
+        <pre><code>
                   const ButtonElement = React.forwardRef((props, ref) => (
                       &lt;button ref={ref} className="CustomButton"&gt;
                           {props.children}
@@ -1356,23 +1305,23 @@
                   &lt;ButtonElement ref={ref}&gt;{'Forward Ref'}&lt;/ButtonElement&gt;
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is Virtual DOM?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is Virtual DOM?</h3>
+      <div class="answer">
+        <pre><code>
                   The Virtual DOM (VDOM) is an in-memory representation of Real DOM.
                   The representation of a UI is kept in memory and synced with the "real" DOM.
                   It's a step that happens between the render function being called and the displaying of elements on the screen.
                   This entire process is called reconciliation.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How Virtual DOM works?</h3>
-        <div class="answer">
-          The Virtual DOM works in three simple steps.
+      <h3>How Virtual DOM works?</h3>
+      <div class="answer">
+        The Virtual DOM works in three simple steps.
 
-          <pre><code>
+        <pre><code>
                       1. Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.
 
                       <img src="./images/vdom1.png"/>
@@ -1386,29 +1335,29 @@
                       <img src="./images/vdom3.png"/>
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is React Fiber?</h3>
-        <div class="answer">
-          Fiber is the new reconciliation engine or reimplementation of core
-          algorithm in React v16.<br />
-          The goal of React Fiber is to increase its suitability for areas like
-          animation, layout, gestures, ability to pause, abort, or reuse work
-          and assign priority to different types of updates; and new concurrency
-          primitives.
-        </div>
+      <h3>What is React Fiber?</h3>
+      <div class="answer">
+        Fiber is the new reconciliation engine or reimplementation of core
+        algorithm in React v16.<br />
+        The goal of React Fiber is to increase its suitability for areas like
+        animation, layout, gestures, ability to pause, abort, or reuse work
+        and assign priority to different types of updates; and new concurrency
+        primitives.
+      </div>
 
-        <h3>What is the main goal of React Fiber?</h3>
-        <div class="answer">
-          The goal of React Fiber is to increase its suitability for areas like
-          animation, layout, and gestures. Its headline feature is incremental
-          rendering: the ability to split rendering work into chunks and spread
-          it out over multiple frames.
-        </div>
+      <h3>What is the main goal of React Fiber?</h3>
+      <div class="answer">
+        The goal of React Fiber is to increase its suitability for areas like
+        animation, layout, and gestures. Its headline feature is incremental
+        rendering: the ability to split rendering work into chunks and spread
+        it out over multiple frames.
+      </div>
 
-        <h3>What are controlled components?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are controlled components?</h3>
+      <div class="answer">
+        <pre><code>
                   A component that controls the input elements within the forms on subsequent user input is called Controlled Component, i.e, every state mutation will have an associated handler function.
 
                   For example, to write all the names in uppercase letters, we use handleChange as below,
@@ -1417,11 +1366,11 @@
                       this.setState({value: event.target.value.toUpperCase()})
                       }
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are uncontrolled components?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are uncontrolled components?</h3>
+      <div class="answer">
+        <pre><code>
                   The Uncontrolled Components are the ones that store their own state internally, and you query the DOM using a ref to find its current value when you need it. This is a bit more like traditional HTML.
 
                   In the below UserProfile component, the name input is accessed using ref.
@@ -1453,29 +1402,29 @@
 
                   In most cases, it's recommend to use controlled components to implement forms.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What is the difference between createElement and cloneElement?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        What is the difference between createElement and cloneElement?
+      </h3>
+      <div class="answer">
+        <pre><code>
                   JSX elements will be transpiled to React.createElement() functions to create React elements which are going to be used for the object representation of UI.
                   Whereas cloneElement is used to clone an element and pass it new props.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is Lifting State Up in React?</h3>
-        <div class="answer">
-          <pre><code >
+      <h3>What is Lifting State Up in React?</h3>
+      <div class="answer">
+        <pre><code >
                   When several components need to share the same changing data then it is recommended to lift the shared state up to their closest common ancestor.
                   That means if two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are the different phases of component lifecycle?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are the different phases of component lifecycle?</h3>
+      <div class="answer">
+        <pre><code>
                   The component lifecycle has three distinct lifecycle phases:
 
                       1. Mounting: The component is ready to mount in the browser DOM. This phase covers initialization from constructor(), getDerivedStateFromProps(), render(), and componentDidMount() lifecycle methods.
@@ -1493,11 +1442,11 @@
                       3. Commit React works with the DOM and executes the final lifecycles respectively componentDidMount() for mounting, componentDidUpdate() for updating, and componentWillUnmount() for unmounting.
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are the lifecycle methods of React?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are the lifecycle methods of React?</h3>
+      <div class="answer">
+        <pre><code>
                   Before React 16.3
 
                       componentWillMount: Executed before rendering and is used for App level configuration in your root component.
@@ -1518,11 +1467,11 @@
                       componentWillUnmount It will be used to cancel any outgoing network requests, or remove all event listeners associated with the component.
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are Higher-Order Components?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are Higher-Order Components?</h3>
+      <div class="answer">
+        <pre><code>
                   A higher-order component (HOC) is a function that takes a component and returns a new component.
                   Basically, it's a pattern that is derived from React's compositional nature.
 
@@ -1536,11 +1485,11 @@
                       - State abstraction and manipulation.
                       - Props manipulation.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is context?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is context?</h3>
+      <div class="answer">
+        <pre><code>
                   Context provides a way to pass data through the component tree without having to pass props down manually at every level.
 
                   For example, authenticated user, locale preference, UI theme need to be accessed in the application by many components.
@@ -1548,11 +1497,11 @@
                       const {Provider, Consumer} = React.createContext(defaultValue)
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is children prop?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is children prop?</h3>
+      <div class="answer">
+        <pre><code>
                   Children is a prop (this.prop.children) that allow you to pass components as data to other components,
                   just like any other prop you use. Component tree put between component's opening and closing tag will be passed to that component as children prop.
 
@@ -1576,11 +1525,11 @@
                   )
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How to write comments in React?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to write comments in React?</h3>
+      <div class="answer">
+        <pre><code>
                   The comments in React/JSX are similar to JavaScript Multiline comments but are
                   wrapped in curly braces.
 
@@ -1600,13 +1549,13 @@
                       &lt;/div&gt;
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What is the purpose of using super constructor with props argument?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        What is the purpose of using super constructor with props argument?
+      </h3>
+      <div class="answer">
+        <pre><code>
                   A child class constructor cannot make use of this reference until super() method
                   has been called. The same applies for ES6 sub-classes as well.
                   The main reason of passing props parameter to super() call is to access this.props
@@ -1643,20 +1592,20 @@
                   It would be the same outside the constructor.
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is reconciliation?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is reconciliation?</h3>
+      <div class="answer">
+        <pre><code>
                   When a component's props or state change, React decides whether an actual DOM update is necessary
                   by comparing the newly returned element with the previously rendered one.
                   When they are not equal, React will update the DOM. This process is called reconciliation.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How to set state with a dynamic key name?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to set state with a dynamic key name?</h3>
+      <div class="answer">
+        <pre><code>
                   If you are using ES6 or the Babel transpiler to transform your JSX code then you
                   can accomplish this with computed property names.
 
@@ -1664,11 +1613,11 @@
                     this.setState({ [event.target.id]: event.target.value })
                   }
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How to set state with a dynamic key name?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to set state with a dynamic key name?</h3>
+      <div class="answer">
+        <pre><code>
                   If you are using ES6 or the Babel transpiler to transform your JSX code then you
                   can accomplish this with computed property names.
 
@@ -1676,11 +1625,11 @@
                     this.setState({ [event.target.id]: event.target.value })
                   }
               </code></pre>
-        </div>
+      </div>
 
-        <h3>Is lazy function supports named exports?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>Is lazy function supports named exports?</h3>
+      <div class="answer">
+        <pre><code>
                   No, currently React.lazy function supports default exports only.
                   If you would like to import modules which are named exports, you can create an
                   intermediate module that reexports it as the default.
@@ -1702,11 +1651,11 @@
                       const SomeComponent = lazy(() => import("./IntermediateComponent.js"));
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>Why React uses className over class attribute?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>Why React uses className over class attribute?</h3>
+      <div class="answer">
+        <pre><code>
                   class is a keyword in JavaScript, and JSX is an extension of JavaScript.
                   That's the principal reason why React uses className instead of class.
                   Pass a string as the className prop.
@@ -1716,11 +1665,11 @@
                   }
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are fragments?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are fragments?</h3>
+      <div class="answer">
+        <pre><code>
                   It's common pattern in React which is used for a component to return multiple elements.
                   Fragments let you group a list of children without adding extra nodes to the DOM.
 
@@ -1745,11 +1694,11 @@
                     )
                   }
               </code></pre>
-        </div>
+      </div>
 
-        <h3>Why fragments are better than container divs?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>Why fragments are better than container divs?</h3>
+      <div class="answer">
+        <pre><code>
                   Below are the list of reasons,
 
                       - Fragments are a bit faster and use less memory by not creating an extra DOM node. This only has a real benefit on very large and deep trees.
@@ -1757,11 +1706,11 @@
                       - The DOM Inspector is less cluttered.
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are portals in React ?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are portals in React ?</h3>
+      <div class="answer">
+        <pre><code>
                   Portal is a recommended way to render children into a DOM node that exists outside the DOM hierarchy of the parent component.
 
                       ReactDOM.createPortal(child, container)
@@ -1770,21 +1719,21 @@
                   The second argument is a DOM element.
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are stateless components?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are stateless components?</h3>
+      <div class="answer">
+        <pre><code>
                   If the behaviour is independent of its state then it can be a stateless component.
                   You can use either a function or a class for creating stateless components.
                   But unless you need to use a lifecycle hook in your components, you should go for function components.
                   There are a lot of benefits if you decide to use function components here; they are easy to write, understand, and test, a little faster, and you can avoid the this keyword altogether.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are stateful components?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are stateful components?</h3>
+      <div class="answer">
+        <pre><code>
                   If the behaviour of a component is dependent on the state of the component then it can be termed as stateful component. These stateful components are always class components and have a state that gets initialized in the constructor.
 
                       class App extends Component {
@@ -1814,11 +1763,11 @@
                          )
                        }
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How to apply validation on props in React?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to apply validation on props in React?</h3>
+      <div class="answer">
+        <pre><code>
                   When the application is running in development mode,
                   React will automatically check all props that we set on components to make sure they have correct type. If the type is incorrect, React will generate warning messages in the console. It's disabled in production mode due to performance impact.
                   The mandatory props are defined with isRequired.
@@ -1860,11 +1809,11 @@
                   Note: In React v15.5 PropTypes were moved from React.PropTypes to prop-types library.
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are the advantages of React?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are the advantages of React?</h3>
+      <div class="answer">
+        <pre><code>
                   Below are the list of main advantages of React,
 
                       1. Increases the application's performance with Virtual DOM.
@@ -1874,12 +1823,12 @@
                       5. Easy to write unit and integration tests with tools such as Jest.
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are the limitations of React?</h3>
-        <div class="answer">
-          Apart from the advantages, there are few limitations of React too,
-          <pre><code>
+      <h3>What are the limitations of React?</h3>
+      <div class="answer">
+        Apart from the advantages, there are few limitations of React too,
+        <pre><code>
                       1. React is just a view library, not a full framework.
                       2. There is a learning curve for beginners who are new to web development.
                       3. Integrating React into a traditional MVC framework requires some additional configuration.
@@ -1887,11 +1836,11 @@
                       5. Too many smaller components leading to over engineering or boilerplate.
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are error boundaries in React v16?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are error boundaries in React v16?</h3>
+      <div class="answer">
+        <pre><code>
                   Error boundaries are components that catch JavaScript errors anywhere in their child component tree,
                   log those errors, and display a fallback UI instead of the component tree that crashed.
 
@@ -1929,27 +1878,27 @@
                   &lt;/ErrorBoundary&gt;
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How error boundaries handled in React v15?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How error boundaries handled in React v15?</h3>
+      <div class="answer">
+        <pre><code>
                   React v15 provided very basic support for error boundaries using unstable_handleError method.
                   It has been renamed to componentDidCatch in React v16.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are the recommended ways for static type checking?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are the recommended ways for static type checking?</h3>
+      <div class="answer">
+        <pre><code>
                   Normally we use PropTypes library (React.PropTypes moved to a prop-types package since React v15.5) for type checking in the React applications.
                   For large code bases, it is recommended to use static type checkers such as Flow or TypeScript, that perform type checking at compile time and provide auto-completion features.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is the use of react-dom package?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is the use of react-dom package?</h3>
+      <div class="answer">
+        <pre><code>
                   The react-dom package provides DOM-specific methods that can be used at the top level of your app.
                   Most of the components are not required to use this module. Some of the methods of this package are:
 
@@ -1960,11 +1909,11 @@
                       - createPortal()
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is the purpose of render method of react-dom?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is the purpose of render method of react-dom?</h3>
+      <div class="answer">
+        <pre><code>
                   This method is used to render a React element into the DOM in the supplied container and return a reference to the component.
                   If the React element was previously rendered into container, it will perform an update on it and only mutate the DOM as necessary to reflect the latest changes.
 
@@ -1973,11 +1922,11 @@
                   If the optional callback is provided, it will be executed after the component is rendered or updated.
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is ReactDOMServer?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is ReactDOMServer?</h3>
+      <div class="answer">
+        <pre><code>
                   The ReactDOMServer object enables you to render components to static markup (typically used on node server). This object is mainly used for server-side rendering (SSR). The following methods can be used in both the server and browser environments:
 
                       renderToString()
@@ -1997,11 +1946,11 @@
                       res.end()
                       })
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How to use innerHTML in React?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to use innerHTML in React?</h3>
+      <div class="answer">
+        <pre><code>
                   The dangerouslySetInnerHTML attribute is React's replacement for using innerHTML in the browser DOM. Just like innerHTML, it is risky to use this attribute considering cross-site scripting (XSS) attacks. You just need to pass a __html object as key and HTML text as value.
 
                   In this example MyComponent uses dangerouslySetInnerHTML attribute for setting HTML markup:
@@ -2015,11 +1964,11 @@
                       }
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How to use styles in React?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to use styles in React?</h3>
+      <div class="answer">
+        <pre><code>
                   The style attribute accepts a JavaScript object with camelCased properties rather than a CSS string.
                   This is consistent with the DOM style JavaScript property, is more efficient, and prevents XSS security holes.
 
@@ -2035,31 +1984,31 @@
                   Style keys are camelCased in order to be consistent with accessing the properties on DOM nodes in JavaScript (e.g. node.style.backgroundImage).
 
           </code></pre>
-        </div>
+      </div>
 
-        <h3>How events are different in React?</h3>
-        <div class="answer">
-          Handling events in React elements has some syntactic differences:
-          <pre><code>
+      <h3>How events are different in React?</h3>
+      <div class="answer">
+        Handling events in React elements has some syntactic differences:
+        <pre><code>
                       - React event handlers are named using camelCase, rather than lowercase.
                       - With JSX you pass a function as the event handler, rather than a string.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What will happen if you use setState() in constructor?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What will happen if you use setState() in constructor?</h3>
+      <div class="answer">
+        <pre><code>
                   When you use setState(), then apart from assigning to the object state React also re-renders the component and all its children.
                   You would get error like this: Can only update a mounted or mounting component.
                   So we need to use this.state to initialize variables inside constructor.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is the impact of indexes as keys?</h3>
-        <div class="answer">
-          Keys should be stable, predictable, and unique so that React can keep
-          track of elements.
-          <pre><code>
+      <h3>What is the impact of indexes as keys?</h3>
+      <div class="answer">
+        Keys should be stable, predictable, and unique so that React can keep
+        track of elements.
+        <pre><code>
 
 
                   In the below code snippet each element's key will be based on ordering, rather than tied to the data that is being represented.
@@ -2081,11 +2030,11 @@
                       )}
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>Is it good to use setState() in componentWillMount() method?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>Is it good to use setState() in componentWillMount() method?</h3>
+      <div class="answer">
+        <pre><code>
                   It is recommended to avoid async initialization in componentWillMount() lifecycle
                   method. componentWillMount() is invoked immediately before mounting occurs.
                   It is called before render(), therefore setting state in this method will not trigger
@@ -2102,17 +2051,17 @@
                   }
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What will happen if you use props in initial state?</h3>
-        <div class="answer">
-          If the props on the component are changed without the component being
-          refreshed, the new prop value will never be displayed because the
-          constructor function will never update the current state of the
-          component.<br />
-          The initialization of state from props only runs when the component is
-          first created.
-          <pre><code>
+      <h3>What will happen if you use props in initial state?</h3>
+      <div class="answer">
+        If the props on the component are changed without the component being
+        refreshed, the new prop value will never be displayed because the
+        constructor function will never update the current state of the
+        component.<br />
+        The initialization of state from props only runs when the component is
+        first created.
+        <pre><code>
 
                   The below component won't display the updated input value:
 
@@ -2148,15 +2097,15 @@
                   }
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How do you conditionally render components?</h3>
-        <div class="answer">
-          In some cases you want to render different components depending on
-          some state. JSX does not render false or undefined, so you can use
-          conditional short-circuiting to render a given part of your component
-          only if a certain condition is true.
-          <pre><code>
+      <h3>How do you conditionally render components?</h3>
+      <div class="answer">
+        In some cases you want to render different components depending on
+        some state. JSX does not render false or undefined, so you can use
+        conditional short-circuiting to render a given part of your component
+        only if a certain condition is true.
+        <pre><code>
 
 
                       const MyComponent = ({ name, address }) => (
@@ -2181,11 +2130,11 @@
                       )
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>Why we need to be careful when spreading props on DOM elements?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>Why we need to be careful when spreading props on DOM elements?</h3>
+      <div class="answer">
+        <pre><code>
                   When we spread props we run into the risk of adding unknown HTML attributes, which is a bad practice.
                   Instead we can use prop destructuring with ...rest operator, so it will add only required props.
 
@@ -2198,11 +2147,11 @@
                           &lt;div {...domProps}&gt;{'ComponentB'}&lt;/div&gt;
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How you implement Server Side Rendering or SSR?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How you implement Server Side Rendering or SSR?</h3>
+      <div class="answer">
+        <pre><code>
                   React is already equipped to handle rendering on Node servers.
                   A special version of the DOM renderer is available, which follows the same pattern as on the client side.
 
@@ -2215,21 +2164,21 @@
                   React detects the pre-rendered content and seamlessly picks up where it left off.
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How to enable production mode in React?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to enable production mode in React?</h3>
+      <div class="answer">
+        <pre><code>
                   You should use Webpack's DefinePlugin method to set NODE_ENV to production,
                   by which it strip out things like propType validation and extra warnings.
                   Apart from this, if you minify the code, for example, Uglify's dead-code elimination
                   to strip out development only code and comments, it will drastically reduce the size of your bundle.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is CRA and its benefits?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is CRA and its benefits?</h3>
+      <div class="answer">
+        <pre><code>
                   The create-react-app CLI tool allows you to quickly create & run React applications with no configuration step.
 
                   Let's create Todo App using CRA:
@@ -2255,11 +2204,11 @@
                       - A live development server that warns about common mistakes.
                       - A build script to bundle JS, CSS, and images for production, with hashes and sourcemaps.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is the lifecycle methods order in mounting?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is the lifecycle methods order in mounting?</h3>
+      <div class="answer">
+        <pre><code>
                   The lifecycle methods are called in the following order when an instance of a
                   component is being created and inserted into the DOM.
 
@@ -2269,18 +2218,18 @@
                   - componentDidMount()
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>Do Hooks replace render props and higher order components?</h3>
-        <div class="answer">
-          Both render props and higher-order components render only a single
-          child but in most of the cases Hooks are a simpler way to serve this
-          by reducing nesting in your tree.
-        </div>
+      <h3>Do Hooks replace render props and higher order components?</h3>
+      <div class="answer">
+        Both render props and higher-order components render only a single
+        child but in most of the cases Hooks are a simpler way to serve this
+        by reducing nesting in your tree.
+      </div>
 
-        <h3>What is the recommended way for naming components?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is the recommended way for naming components?</h3>
+      <div class="answer">
+        <pre><code>
                   It is recommended to name the component by reference instead of using displayName.
 
                   Using displayName for naming component:
@@ -2297,11 +2246,11 @@
                       }
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>Why we need to pass a function to setState()?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>Why we need to pass a function to setState()?</h3>
+      <div class="answer">
+        <pre><code>
                   The reason behind for this is that setState() is an asynchronous operation. React batches state changes for performance reasons, so the state may not change immediately after setState() is called. That means you should not rely on the current state when calling setState() since you can't be sure what that state will be. The solution is to pass a function to setState(), with the previous state as an argument. By doing this you can avoid issues with the user getting the old state value on access due to the asynchronous nature of setState().
 
                   Let's say the initial count value is zero. After three consecutive increment operations, the value is going to be incremented only by one.
@@ -2337,11 +2286,11 @@
                       }))
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>Why should component names start with capital letter?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>Why should component names start with capital letter?</h3>
+      <div class="answer">
+        <pre><code>
                   If you are rendering your component using JSX, the name of that component has to begin with a capital letter otherwise React will throw an error as unrecognized tag. This convention is because only HTML elements and SVG tags can begin with a lowercase letter.
 
                       class SomeComponent extends Component {
@@ -2362,11 +2311,11 @@
                   import MyComponent from './MyComponent'
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is the difference between constructor and getInitialState?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is the difference between constructor and getInitialState?</h3>
+      <div class="answer">
+        <pre><code>
                   You should initialize state in the constructor when using ES6 classes, and getInitialState() method when using React.createClass().
 
                   Using ES6 classes:
@@ -2388,13 +2337,13 @@
                   Note: React.createClass() is deprecated and removed in React v16. Use plain JavaScript classes instead.
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          Can you force a component to re-render without calling setState?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        Can you force a component to re-render without calling setState?
+      </h3>
+      <div class="answer">
+        <pre><code>
                   By default, when your component's state or props change, your component will re-render.
                   If your render() method depends on some other data, you can tell React that the component needs re-rendering by calling forceUpdate().
 
@@ -2402,14 +2351,14 @@
 
                   It is recommended to avoid all uses of forceUpdate() and only read from this.props and this.state in render().
               </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What is the difference between super() and super(props) in React using
-          ES6 classes?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        What is the difference between super() and super(props) in React using
+        ES6 classes?
+      </h3>
+      <div class="answer">
+        <pre><code>
                   When you want to access this.props in constructor() then you should pass props to super() method.
 
                   Using super(props):
@@ -2432,11 +2381,11 @@
                   Outside constructor() both will display same value for this.props.
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How to loop inside JSX?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to loop inside JSX?</h3>
+      <div class="answer">
+        <pre><code>
                   You can simply use Array.prototype.map with ES6 arrow function syntax.
 
                   For example, the items array of objects is mapped into an array of components:
@@ -2455,14 +2404,14 @@
 
 
               </code></pre>
-          This is because JSX tags are transpiled into function calls, and you
-          can't use statements inside expressions.<br />
-          This may change thanks to do expressions which are stage 1 proposal.
-        </div>
+        This is because JSX tags are transpiled into function calls, and you
+        can't use statements inside expressions.<br />
+        This may change thanks to do expressions which are stage 1 proposal.
+      </div>
 
-        <h3>What is React PropType array with shape?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is React PropType array with shape?</h3>
+      <div class="answer">
+        <pre><code>
                   If you want to pass an array of objects to a component with a particular shape then use React.PropTypes.shape() as an argument to React.PropTypes.arrayOf().
 
                   ReactComponent.propTypes = {
@@ -2473,11 +2422,11 @@
                   }
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How to conditionally apply class attributes?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to conditionally apply class attributes?</h3>
+      <div class="answer">
+        <pre><code>
                   You shouldn't use curly braces inside quotes because it is going to be evaluated as a string.
 
                       &lt;div className="btn-panel {this.props.visible ? 'show' : 'hidden'}"&gt;
@@ -2490,48 +2439,48 @@
                       &lt;div className={`btn-panel ${this.props.visible ? 'show' : 'hidden'}`}&gt;
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is the difference between React and ReactDOM?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is the difference between React and ReactDOM?</h3>
+      <div class="answer">
+        <pre><code>
                   The react package contains React.createElement(), React.Component, React.Children, and other
                   helpers related to elements and component classes.
                   You can think of these as the isomorphic or universal helpers that you need to build components.
                   The react-dom package contains ReactDOM.render(), and in react-dom/server we have server-side rendering support with ReactDOMServer.renderToString() and ReactDOMServer.renderToStaticMarkup().
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How to listen to state changes?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to listen to state changes?</h3>
+      <div class="answer">
+        <pre><code>
                   The componentDidUpdate lifecycle method will be called when state changes.
                   You can compare provided state and props values with current state and props to determine if something meaningful changed.
 
                       componentDidUpdate(object prevProps, object prevState)
 
               </code></pre>
-          Note: The previous releases of ReactJS also uses
-          componentWillUpdate(object nextProps, object nextState) for state
-          changes. It has been deprecated in latest releases.
-        </div>
+        Note: The previous releases of ReactJS also uses
+        componentWillUpdate(object nextProps, object nextState) for state
+        changes. It has been deprecated in latest releases.
+      </div>
 
-        <h3>How to listen to state changes?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to listen to state changes?</h3>
+      <div class="answer">
+        <pre><code>
                   The componentDidUpdate lifecycle method will be called when state changes.
                   You can compare provided state and props values with current state and props to determine if something meaningful changed.
 
                       componentDidUpdate(object prevProps, object prevState)
               </code></pre>
-          Note: The previous releases of ReactJS also uses
-          componentWillUpdate(object nextProps, object nextState) for state
-          changes. It has been deprecated in latest releases.
-        </div>
+        Note: The previous releases of ReactJS also uses
+        componentWillUpdate(object nextProps, object nextState) for state
+        changes. It has been deprecated in latest releases.
+      </div>
 
-        <h3>Is it possible to use React without rendering HTML?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>Is it possible to use React without rendering HTML?</h3>
+      <div class="answer">
+        <pre><code>
                   It is possible with latest version (>=16.2). Below are the possible options:
 
                       render() {
@@ -2552,19 +2501,19 @@
 
                   Returning undefined won't work.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>Why you can't update props in React?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>Why you can't update props in React?</h3>
+      <div class="answer">
+        <pre><code>
                   The React philosophy is that props should be immutable and top-down.
                   This means that a parent can send any prop values to a child, but the child can't modify received props.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are the possible ways of updating objects in state?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are the possible ways of updating objects in state?</h3>
+      <div class="answer">
+        <pre><code>
                   Calling setState() with an object to merge with state:
 
                       1. Using Object.assign() to create a copy of the object:
@@ -2586,11 +2535,11 @@
                           }))
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How to update a component every second?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to update a component every second?</h3>
+      <div class="answer">
+        <pre><code>
                   You need to use setInterval() to trigger the change, but you also need to clear the timer when the component unmounts to prevent errors and memory leaks.
 
                       componentDidMount() {
@@ -2602,15 +2551,15 @@
                       }
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are the exceptions on React component naming?</h3>
-        <div class="answer">
-          The component names should start with a uppercase letter but there are
-          few exceptions on this convention. The lowercase tag names with a dot
-          (property accessors) are still considered as valid component names.
+      <h3>What are the exceptions on React component naming?</h3>
+      <div class="answer">
+        The component names should start with a uppercase letter but there are
+        few exceptions on this convention. The lowercase tag names with a dot
+        (property accessors) are still considered as valid component names.
 
-          <pre><code>
+        <pre><code>
 
                   For example the below tag can be compiled to a valid component,
 
@@ -2621,25 +2570,25 @@
                   }
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>Why is a component constructor called only once?</h3>
-        <div class="answer">
-          React's reconciliation algorithm assumes that without any information
-          to the contrary, if a custom component appears in the same place on
-          subsequent renders, it's the same component as before, so reuses the
-          previous instance rather than creating a new one.
-        </div>
+      <h3>Why is a component constructor called only once?</h3>
+      <div class="answer">
+        React's reconciliation algorithm assumes that without any information
+        to the contrary, if a custom component appears in the same place on
+        subsequent renders, it's the same component as before, so reuses the
+        previous instance rather than creating a new one.
+      </div>
 
-        <h3>How to programmatically trigger click event in React?</h3>
-        <div class="answer">
-          You could use the ref prop to acquire a reference to the underlying
-          HTMLInputElement object through a callback, store the reference as a
-          class property, then use that reference to later trigger a click from
-          your event handlers using the HTMLElement.click method.<br />
+      <h3>How to programmatically trigger click event in React?</h3>
+      <div class="answer">
+        You could use the ref prop to acquire a reference to the underlying
+        HTMLInputElement object through a callback, store the reference as a
+        class property, then use that reference to later trigger a click from
+        your event handlers using the HTMLElement.click method.<br />
 
-          This can be done in two steps:
-          <pre><code>
+        This can be done in two steps:
+        <pre><code>
 
                   1. Create ref in render method:
 
@@ -2650,19 +2599,19 @@
                       this.inputElement.click()
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>Is it possible to use async/await in plain React?</h3>
-        <div class="answer">
-          If you want to use async/await in React, you will need Babel<br />
-          and transform-async-to-generator plugin. React Native ships with Babel
-          and a set of transforms.
-        </div>
+      <h3>Is it possible to use async/await in plain React?</h3>
+      <div class="answer">
+        If you want to use async/await in React, you will need Babel<br />
+        and transform-async-to-generator plugin. React Native ships with Babel
+        and a set of transforms.
+      </div>
 
-        <h3>What are the common folder structures for React?</h3>
-        <div class="answer">
-          There are two common practices for React project file structure.
-          <pre><code>
+      <h3>What are the common folder structures for React?</h3>
+      <div class="answer">
+        There are two common practices for React project file structure.
+        <pre><code>
                   1. Grouping by features or routes:
 
                   One common way to structure projects is locate CSS, JS, and tests together, grouped by feature or route.
@@ -2705,23 +2654,23 @@
                   ├─ ProfileHeader.js
                   └─ ProfileHeader.css
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are the popular packages for animation?</h3>
-        <div class="answer">
-          React Transition Group and React Motion are popular animation packages
-          in React ecosystem
-        </div>
+      <h3>What are the popular packages for animation?</h3>
+      <div class="answer">
+        React Transition Group and React Motion are popular animation packages
+        in React ecosystem
+      </div>
 
-        <h3>What is the benefit of styles modules?</h3>
-        <div class="answer">
-          It is recommended to avoid hard coding style values in components.<br />
-          Any values that are likely to be used across different UI components
-          should be extracted into their own modules.<br />
+      <h3>What is the benefit of styles modules?</h3>
+      <div class="answer">
+        It is recommended to avoid hard coding style values in components.<br />
+        Any values that are likely to be used across different UI components
+        should be extracted into their own modules.<br />
 
-          For example, these styles could be extracted into a separate
-          component:
-          <pre><code>
+        For example, these styles could be extracted into a separate
+        component:
+        <pre><code>
                       export const colors = {
                           white,
                           black,
@@ -2741,76 +2690,76 @@
                       import { space, colors } from './styles'
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are the popular React-specific linters?</h3>
-        <div class="answer">
-          ESLint is a popular JavaScript linter. There are plugins available
-          that analyse specific code styles. One of the most common for React is
-          an npm package called eslint-plugin-react.<br />
-          By default, it will check a number of best practices, with rules
-          checking things from keys in iterators to a complete set of prop
-          types.<br />
+      <h3>What are the popular React-specific linters?</h3>
+      <div class="answer">
+        ESLint is a popular JavaScript linter. There are plugins available
+        that analyse specific code styles. One of the most common for React is
+        an npm package called eslint-plugin-react.<br />
+        By default, it will check a number of best practices, with rules
+        checking things from keys in iterators to a complete set of prop
+        types.<br />
 
-          Another popular plugin is eslint-plugin-jsx-a11y, which will help fix
-          common issues with accessibility.<br />
-          As JSX offers slightly different syntax to regular HTML, issues with
-          alt text and tabindex, for example, will not be picked up by regular
-          plugins.
-        </div>
+        Another popular plugin is eslint-plugin-jsx-a11y, which will help fix
+        common issues with accessibility.<br />
+        As JSX offers slightly different syntax to regular HTML, issues with
+        alt text and tabindex, for example, will not be picked up by regular
+        plugins.
+      </div>
 
-        <h3>What are render props?</h3>
-        <div class="answer">
-          Render Props is a simple technique for sharing code between components
-          using a prop whose value is a function.<br />
-          The below component uses render prop which returns a React element.
-          <pre><code>
+      <h3>What are render props?</h3>
+      <div class="answer">
+        Render Props is a simple technique for sharing code between components
+        using a prop whose value is a function.<br />
+        The below component uses render prop which returns a React element.
+        <pre><code>
                       &lt;DataProvider render={data => (
                           &lt;h1&gt;{`Hello ${data.target}`}&lt;/h1&gt;
                       )}/&gt;
               </code></pre>
-          Libraries such as React Router and DownShift are using this pattern.
-        </div>
+        Libraries such as React Router and DownShift are using this pattern.
+      </div>
 
-        <h4>ReactJS Questions - Redux</h4>
+      <h4>ReactJS Questions - Redux</h4>
 
-        <h3>What is Redux?</h3>
-        <div class="answer">
-          Redux is a predictable state container for JavaScript apps based on
-          the Flux design pattern.<br />
-          Redux can be used together with React, or with any other view library.
-          It is tiny (about 2kB) and has no dependencies.
-        </div>
+      <h3>What is Redux?</h3>
+      <div class="answer">
+        Redux is a predictable state container for JavaScript apps based on
+        the Flux design pattern.<br />
+        Redux can be used together with React, or with any other view library.
+        It is tiny (about 2kB) and has no dependencies.
+      </div>
 
-        <h3>What are the core principles of Redux?</h3>
-        <div class="answer">
-          Redux follows three fundamental principles:
-          <pre><code>
+      <h3>What are the core principles of Redux?</h3>
+      <div class="answer">
+        Redux follows three fundamental principles:
+        <pre><code>
                       1. Single source of truth: The state of your whole application is stored in an object tree within a single store. The single state tree makes it easier to keep track of changes over time and debug or inspect the application.
                       2. State is read-only: The only way to change the state is to emit an action, an object describing what happened. This ensures that neither the views nor the network callbacks will ever write directly to the state.
                       3. Changes are made with pure functions: To specify how the state tree is transformed by actions, you write reducers. Reducers are just pure functions that take the previous state and an action as parameters, and return the next state.
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are the downsides of Redux compared to Flux?</h3>
-        <div class="answer">
-          Instead of saying downsides we can say that there are few compromises
-          of using Redux over Flux.<br />
-          Those are as follows:
-          <pre><code>
+      <h3>What are the downsides of Redux compared to Flux?</h3>
+      <div class="answer">
+        Instead of saying downsides we can say that there are few compromises
+        of using Redux over Flux.<br />
+        Those are as follows:
+        <pre><code>
                       1. You will need to learn to avoid mutations: Flux is un-opinionated about mutating data, but Redux doesn't like mutations and many packages complementary to Redux assume you never mutate the state. You can enforce this with dev-only packages like redux-immutable-state-invariant, Immutable.js, or instructing your team to write non-mutating code.
                       2. You're going to have to carefully pick your packages: While Flux explicitly doesn't try to solve problems such as undo/redo, persistence, or forms, Redux has extension points such as middleware and store enhancers, and it has spawned a rich ecosystem.
                       3. There is no nice Flow integration yet: Flux currently lets you do very impressive static type checks which Redux doesn't support yet.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What is the difference between mapStateToProps() and
-          mapDispatchToProps()?
-        </h3>
-        <div class="answer">
-          <pre><code>
+      <h3>
+        What is the difference between mapStateToProps() and
+        mapDispatchToProps()?
+      </h3>
+      <div class="answer">
+        <pre><code>
                   mapStateToProps() is a utility which helps your component get updated state
                   (which is updated by some other components):
 
@@ -2841,20 +2790,20 @@
                       })
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>Can I dispatch an action in reducer?</h3>
-        <div class="answer">
-          Dispatching an action within a reducer is an anti-pattern.<br />
-          Your reducer should be without side effects, simply digesting the
-          action payload and returning a new state object.<br />
-          Adding listeners and dispatching actions within the reducer can lead
-          to chained actions and other side effects.
-        </div>
+      <h3>Can I dispatch an action in reducer?</h3>
+      <div class="answer">
+        Dispatching an action within a reducer is an anti-pattern.<br />
+        Your reducer should be without side effects, simply digesting the
+        action payload and returning a new state object.<br />
+        Adding listeners and dispatching actions within the reducer can lead
+        to chained actions and other side effects.
+      </div>
 
-        <h3>How to access Redux store outside a component?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to access Redux store outside a component?</h3>
+      <div class="answer">
+        <pre><code>
                   You just need to export the store from the module where it created with createStore().
                   Also, it shouldn't pollute the global window object.
 
@@ -2863,40 +2812,40 @@
                   export default store
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are the drawbacks of MVW pattern?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are the drawbacks of MVW pattern?</h3>
+      <div class="answer">
+        <pre><code>
                   1. DOM manipulation is very expensive which causes applications to behave slow and inefficient.
                   2. Due to circular dependencies, a complicated model was created around models and views.
                   3. Lot of data changes happens for collaborative applications(like Google Docs).
                   4. No way to do undo (travel back in time) easily without adding so much extra code.
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>Are there any similarities between Redux and RxJS?</h3>
-        <div class="answer">
-          These libraries are very different for very different purposes, but
-          there are some vague similarities.<br />
+      <h3>Are there any similarities between Redux and RxJS?</h3>
+      <div class="answer">
+        These libraries are very different for very different purposes, but
+        there are some vague similarities.<br />
 
-          Redux is a tool for managing state throughout the application. It is
-          usually used as an architecture for UIs. Think of it as an alternative
-          to (half of) Angular.<br />
-          RxJS is a reactive programming library. It is usually used as a tool
-          to accomplish asynchronous tasks in JavaScript. Think of it as an
-          alternative to Promises.<br />
-          Redux uses the Reactive paradigm because the Store is reactive. The
-          Store observes actions from a distance, and changes itself. RxJS also
-          uses the Reactive paradigm, but instead of being an architecture, it
-          gives you basic building blocks, Observables, to accomplish this
-          pattern.
-        </div>
+        Redux is a tool for managing state throughout the application. It is
+        usually used as an architecture for UIs. Think of it as an alternative
+        to (half of) Angular.<br />
+        RxJS is a reactive programming library. It is usually used as a tool
+        to accomplish asynchronous tasks in JavaScript. Think of it as an
+        alternative to Promises.<br />
+        Redux uses the Reactive paradigm because the Store is reactive. The
+        Store observes actions from a distance, and changes itself. RxJS also
+        uses the Reactive paradigm, but instead of being an architecture, it
+        gives you basic building blocks, Observables, to accomplish this
+        pattern.
+      </div>
 
-        <h3>How to dispatch an action on load?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to dispatch an action on load?</h3>
+      <div class="answer">
+        <pre><code>
                   You can dispatch an action in componentDidMount() method and in render() method you can verify the data.
 
                       class App extends Component {
@@ -2920,11 +2869,11 @@
                       export default connect(mapStateToProps, mapDispatchToProps)(App)
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How to use connect() from React Redux?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to use connect() from React Redux?</h3>
+      <div class="answer">
+        <pre><code>
                   You need to follow two steps to use your store in your container:
 
                       1. Use mapStateToProps(): It maps the state variables from your store to the props that you specify.
@@ -2949,11 +2898,11 @@
                           export default connect(mapStateToProps)(App)
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How to reset state in Redux?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to reset state in Redux?</h3>
+      <div class="answer">
+        <pre><code>
                   You need to write a root reducer in your application which delegate handling the action to the reducer generated by combineReducers().
 
                   For example, let us take rootReducer() to return the initial state after USER_LOGOUT action.
@@ -2992,11 +2941,11 @@
                       return appReducer(state, action)
                       }
               </code></pre>
-        </div>
+      </div>
 
-        <h3>Whats the purpose of at symbol in the Redux connect decorator?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>Whats the purpose of at symbol in the Redux connect decorator?</h3>
+      <div class="answer">
+        <pre><code>
                   The @ symbol is in fact a JavaScript expression used to signify decorators.
                   Decorators make it possible to annotate and modify classes and properties at design time.
 
@@ -3048,33 +2997,33 @@
                       You can use babel for the decorators support.
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is the difference between React context and React Redux?</h3>
-        <div class="answer">
-          You can use Context in your application directly and is going to be
-          great for passing down data to deeply nested components which what it
-          was designed for.<br />
+      <h3>What is the difference between React context and React Redux?</h3>
+      <div class="answer">
+        You can use Context in your application directly and is going to be
+        great for passing down data to deeply nested components which what it
+        was designed for.<br />
 
-          Whereas Redux is much more powerful and provides a large number of
-          features that the Context API doesn't provide.<br />
-          Also, React Redux uses context internally but it doesn't expose this
-          fact in the public API.
-        </div>
+        Whereas Redux is much more powerful and provides a large number of
+        features that the Context API doesn't provide.<br />
+        Also, React Redux uses context internally but it doesn't expose this
+        fact in the public API.
+      </div>
 
-        <h3>Why are Redux state functions called reducers?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>Why are Redux state functions called reducers?</h3>
+      <div class="answer">
+        <pre><code>
                   Reducers always return the accumulation of the state (based on all previous and current actions).
                   Therefore, they act as a reducer of state. Each time a Redux reducer is called, the state and action are passed as parameters.
                   This state is then reduced (or accumulated) based on the action, and then the next state is returned.
                   You could reduce a collection of actions and an initial state (of the store) on which to perform these actions to get the resulting final state.
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How to make AJAX request in Redux?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to make AJAX request in Redux?</h3>
+      <div class="answer">
+        <pre><code>
                   You can use redux-thunk middleware which allows you to define async actions.
 
                   Let's take an example of fetching specific account as an AJAX call using fetch API:
@@ -3098,24 +3047,24 @@
                       }
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>Should I keep all component's state in Redux store?</h3>
-        <div class="answer">
-          Keep your data in the Redux store, and the UI related state internally
-          in the component.
-        </div>
+      <h3>Should I keep all component's state in Redux store?</h3>
+      <div class="answer">
+        Keep your data in the Redux store, and the UI related state internally
+        in the component.
+      </div>
 
-        <h3>What is the proper way to access Redux store?</h3>
-        <div class="answer">
-          The best way to access your store in a component is to use the
-          connect() function, that creates a new component that wraps around
-          your existing one. This pattern is called Higher-Order Components, and
-          is generally the preferred way of extending a component's
-          functionality in React. This allows you to map state and action
-          creators to your component, and have them passed in automatically as
-          your store updates.
-          <pre><code>
+      <h3>What is the proper way to access Redux store?</h3>
+      <div class="answer">
+        The best way to access your store in a component is to use the
+        connect() function, that creates a new component that wraps around
+        your existing one. This pattern is called Higher-Order Components, and
+        is generally the preferred way of extending a component's
+        functionality in React. This allows you to map state and action
+        creators to your component, and have them passed in automatically as
+        your store updates.
+        <pre><code>
 
                   Let's take an example of "FilterLink" component using connect:
 
@@ -3147,28 +3096,28 @@
                           }
                       }
               </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What is the difference between component and container in React Redux?
-        </h3>
-        <div class="answer">
-          Component is a class or function component that describes the
-          presentational part of your application.<br />
-          Container is an informal term for a component that is connected to a
-          Redux store.<br />
-          Containers subscribe to Redux state updates and dispatch actions, and
-          they usually don't render DOM elements; they delegate rendering to
-          presentational child components.
-        </div>
+      <h3>
+        What is the difference between component and container in React Redux?
+      </h3>
+      <div class="answer">
+        Component is a class or function component that describes the
+        presentational part of your application.<br />
+        Container is an informal term for a component that is connected to a
+        Redux store.<br />
+        Containers subscribe to Redux state updates and dispatch actions, and
+        they usually don't render DOM elements; they delegate rendering to
+        presentational child components.
+      </div>
 
-        <h3>What is the purpose of the constants in Redux?</h3>
-        <div class="answer">
-          Constants allows you to easily find all usages of that specific
-          functionality across the project when you use an IDE.<br />
-          It also prevents you from introducing silly bugs caused by typos – in
-          which case, you will get a ReferenceError immediately.
-          <pre><code>
+      <h3>What is the purpose of the constants in Redux?</h3>
+      <div class="answer">
+        Constants allows you to easily find all usages of that specific
+        functionality across the project when you use an IDE.<br />
+        It also prevents you from introducing silly bugs caused by typos – in
+        which case, you will get a ReferenceError immediately.
+        <pre><code>
                   Normally we will save them in a single file (constants.js or actionTypes.js).
 
                       export const ADD_TODO = 'ADD_TODO'
@@ -3211,11 +3160,11 @@
                           }
                       }
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What are the different ways to write mapDispatchToProps()?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are the different ways to write mapDispatchToProps()?</h3>
+      <div class="answer">
+        <pre><code>
                   There are a few ways of binding action creators to dispatch() in mapDispatchToProps().
 
                   Below are the possible options:
@@ -3233,18 +3182,18 @@
                       The third option is just a shorthand for the first one.
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>
-          What is the use of the ownProps parameter in mapStateToProps() and
-          mapDispatchToProps()?
-        </h3>
-        <div class="answer">
-          If the ownProps parameter is specified, React Redux will pass the
-          props that were passed to the component into your connect
-          functions.<br />
-          So, if you use a connected component:
-          <pre><code>
+      <h3>
+        What is the use of the ownProps parameter in mapStateToProps() and
+        mapDispatchToProps()?
+      </h3>
+      <div class="answer">
+        If the ownProps parameter is specified, React Redux will pass the
+        props that were passed to the component into your connect
+        functions.<br />
+        So, if you use a connected component:
+        <pre><code>
                       import ConnectedComponent from './containers/ConnectedComponent';
 
                       &lt;ConnectedComponent user={'john'} /&gt;
@@ -3256,24 +3205,24 @@
                   You can use this object to decide what to return from those functions.
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>How to structure Redux top level directories?</h3>
-        <div class="answer">
-          Most of the applications has several top-level directories as below:
-          <pre><code>
+      <h3>How to structure Redux top level directories?</h3>
+      <div class="answer">
+        Most of the applications has several top-level directories as below:
+        <pre><code>
                       1. Components: Used for dumb components unaware of Redux.
                       2. Containers: Used for smart components connected to Redux.
                       3. Actions: Used for all action creators, where file names correspond to part of the app.
                       4. Reducers: Used for all reducers, where files name correspond to state key.
                       5. Store: Used for store initialization
               </code></pre>
-          This structure works well for small and medium size apps.
-        </div>
+        This structure works well for small and medium size apps.
+      </div>
 
-        <h3>What is redux-saga?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is redux-saga?</h3>
+      <div class="answer">
+        <pre><code>
                   redux-saga is a library that aims to make side effects (asynchronous things like data
                   fetching and impure things like accessing the browser cache)
                   in React/Redux applications easier and better.
@@ -3283,25 +3232,25 @@
                       $ npm install --save redux-saga
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is the mental model of redux-saga?</h3>
-        <div class="answer">
-          Saga is like a separate thread in your application, that's solely
-          responsible for side effects.<br />
-          redux-saga is a redux middleware, which means this thread can be
-          started,<br />
-          paused and cancelled from the main application with normal Redux
-          actions,<br />
-          it has access to the full Redux application state and it can dispatch
-          Redux actions as well.
-        </div>
+      <h3>What is the mental model of redux-saga?</h3>
+      <div class="answer">
+        Saga is like a separate thread in your application, that's solely
+        responsible for side effects.<br />
+        redux-saga is a redux middleware, which means this thread can be
+        started,<br />
+        paused and cancelled from the main application with normal Redux
+        actions,<br />
+        it has access to the full Redux application state and it can dispatch
+        Redux actions as well.
+      </div>
 
-        <h3>
-          What are the differences between call() and put() in redux-saga?
-        </h3>
-        <div class="answer">
-          <pre>
+      <h3>
+        What are the differences between call() and put() in redux-saga?
+      </h3>
+      <div class="answer">
+        <pre>
                   <code>
                       Both call() and put() are effect creator functions. call() function is used to create
                       effect description, which instructs middleware to call the promise. put() function creates
@@ -3322,44 +3271,44 @@
                           }
                   </code>
               </pre>
-        </div>
+      </div>
 
-        <h3>What is Redux Thunk?</h3>
-        <div class="answer">
-          <pre>
+      <h3>What is Redux Thunk?</h3>
+      <div class="answer">
+        <pre>
                   <code>
                       Redux Thunk middleware allows you to write action creators that return a function instead of an action.
                       The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met.
                       The inner function receives the store methods dispatch() and getState() as parameters.
                   </code>
               </pre>
-        </div>
+      </div>
 
-        <h3>What are the differences between redux-saga and redux-thunk?</h3>
-        <div class="answer">
-          Both Redux Thunk and Redux Saga take care of dealing with side
-          effects.<br />
-          In most of the scenarios, Thunk uses Promises to deal with them,
-          whereas Saga uses Generators.<br />
-          Thunk is simple to use and Promises are familiar to many developers,
-          Sagas/Generators are more powerful but you will need to learn them.<br />
-          But both middleware can coexist, so you can start with Thunks and
-          introduce Sagas when/if you need them.
-        </div>
+      <h3>What are the differences between redux-saga and redux-thunk?</h3>
+      <div class="answer">
+        Both Redux Thunk and Redux Saga take care of dealing with side
+        effects.<br />
+        In most of the scenarios, Thunk uses Promises to deal with them,
+        whereas Saga uses Generators.<br />
+        Thunk is simple to use and Promises are familiar to many developers,
+        Sagas/Generators are more powerful but you will need to learn them.<br />
+        But both middleware can coexist, so you can start with Thunks and
+        introduce Sagas when/if you need them.
+      </div>
 
-        <h3>What is Redux DevTools?</h3>
-        <div class="answer">
-          Redux DevTools is a live-editing time travel environment for Redux
-          with hot reloading, action replay, and customizable UI.<br />
-          If you don't want to bother with installing Redux DevTools and
-          integrating it into your project, consider using Redux DevTools
-          Extension for Chrome and Firefox.
-        </div>
+      <h3>What is Redux DevTools?</h3>
+      <div class="answer">
+        Redux DevTools is a live-editing time travel environment for Redux
+        with hot reloading, action replay, and customizable UI.<br />
+        If you don't want to bother with installing Redux DevTools and
+        integrating it into your project, consider using Redux DevTools
+        Extension for Chrome and Firefox.
+      </div>
 
-        <h3>What are the features of Redux DevTools?</h3>
-        <div class="answer">
-          Some of the main features of Redux DevTools are below,
-          <pre>
+      <h3>What are the features of Redux DevTools?</h3>
+      <div class="answer">
+        Some of the main features of Redux DevTools are below,
+        <pre>
                   <code>
                           1. Lets you inspect every state and action payload.
                           2. Lets you go back in time by cancelling actions.
@@ -3368,11 +3317,11 @@
                           5. With persistState() store enhancer, you can persist debug sessions across page reloads.
                   </code>
               </pre>
-        </div>
+      </div>
 
-        <h3>What are Redux selectors and why to use them?</h3>
-        <div class="answer">
-          <pre>
+      <h3>What are Redux selectors and why to use them?</h3>
+      <div class="answer">
+        <pre>
                   <code>
                       Selectors are functions that take Redux state as an argument and return some
                       data to pass to the component.
@@ -3388,32 +3337,32 @@
 
                   </code>
               </pre>
-        </div>
+      </div>
 
-        <h3>What is Redux Form?</h3>
-        <div class="answer">
-          Redux Form works with React and Redux to enable a form in React to use
-          Redux to store all of its state.<br />
-          Redux Form can be used with raw HTML5 inputs, but it also works very
-          well with common UI frameworks like Material UI, React Widgets and
-          React Bootstrap.
-        </div>
+      <h3>What is Redux Form?</h3>
+      <div class="answer">
+        Redux Form works with React and Redux to enable a form in React to use
+        Redux to store all of its state.<br />
+        Redux Form can be used with raw HTML5 inputs, but it also works very
+        well with common UI frameworks like Material UI, React Widgets and
+        React Bootstrap.
+      </div>
 
-        <h3>What are the main features of Redux Form?</h3>
-        <div class="answer">
-          Some of the main features of Redux Form are:
-          <pre>
+      <h3>What are the main features of Redux Form?</h3>
+      <div class="answer">
+        Some of the main features of Redux Form are:
+        <pre>
                   <code>
                           1. Field values persistence via Redux store.
                           2. Validation (sync/async) and submission.
                           3. Formatting, parsing and normalization of field values.
                   </code>
               </pre>
-        </div>
+      </div>
 
-        <h3>How to add multiple middlewares to Redux?</h3>
-        <div class="answer">
-          <pre>
+      <h3>How to add multiple middlewares to Redux?</h3>
+      <div class="answer">
+        <pre>
                   <code>
                       You can use applyMiddleware().
 
@@ -3423,11 +3372,11 @@
                           const createStoreWithMiddleware = applyMiddleware(ReduxThunk, logger)(createStore)
                   </code>
               </pre>
-        </div>
+      </div>
 
-        <h3>How to set initial state in Redux?</h3>
-        <div class="answer">
-          <pre>
+      <h3>How to set initial state in Redux?</h3>
+      <div class="answer">
+        <pre>
                   <code>
                       You need to pass initial state as second argument to createStore:
 
@@ -3446,11 +3395,11 @@
                           )
                   </code>
               </pre>
-        </div>
+      </div>
 
-        <h3>How Relay is different from Redux?</h3>
-        <div class="answer">
-          <pre>
+      <h3>How Relay is different from Redux?</h3>
+      <div class="answer">
+        <pre>
                   <code>
                       Relay is similar to Redux in that they both use a single store.
                       The main difference is that relay only manages state originated from the server,
@@ -3459,49 +3408,49 @@
                       by fetching only changed data and nothing more.
                   </code>
               </pre>
-        </div>
+      </div>
 
-        <h3>What is an action in Redux?</h3>
-        <div class="answer">
-          Actions are plain JavaScript objects or payloads of information that
-          send data from your application to your store.<br />
-          They are the only source of information for the store.<br />
-          Actions must have a type property that indicates the type of action
-          being performed.<br />
-          For example, let's take an action which represents adding a new todo
-          item:
-          <pre><code>
+      <h3>What is an action in Redux?</h3>
+      <div class="answer">
+        Actions are plain JavaScript objects or payloads of information that
+        send data from your application to your store.<br />
+        They are the only source of information for the store.<br />
+        Actions must have a type property that indicates the type of action
+        being performed.<br />
+        For example, let's take an action which represents adding a new todo
+        item:
+        <pre><code>
                       {
                           type: ADD_TODO,
                           text: 'Add todo item'
                       }
               </code>
           </pre>
-        </div>
+      </div>
 
-        <!-- router -->
-        <h4>ReactJS Questions - React Router</h4>
+      <!-- router -->
+      <h4>ReactJS Questions - React Router</h4>
 
-        <h3>What is React Router?</h3>
-        <div class="answer">
-          React Router is a powerful routing library built on top of React that
-          helps you add new screens and flows to your application incredibly
-          quickly, all while keeping the URL in sync with what's being displayed
-          on the page.
-        </div>
+      <h3>What is React Router?</h3>
+      <div class="answer">
+        React Router is a powerful routing library built on top of React that
+        helps you add new screens and flows to your application incredibly
+        quickly, all while keeping the URL in sync with what's being displayed
+        on the page.
+      </div>
 
-        <h3>How React Router is different from history library?</h3>
-        <div class="answer">
-          React Router is a wrapper around the history library which handles
-          interaction with the browser's window.history with its browser and
-          hash histories. It also provides memory history which is useful for
-          environments that don't have global history, such as mobile app
-          development (React Native) and unit testing with Node.
-        </div>
+      <h3>How React Router is different from history library?</h3>
+      <div class="answer">
+        React Router is a wrapper around the history library which handles
+        interaction with the browser's window.history with its browser and
+        hash histories. It also provides memory history which is useful for
+        environments that don't have global history, such as mobile app
+        development (React Native) and unit testing with Node.
+      </div>
 
-        <h3>What are the &lt;Router> components of React Router v4?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are the &lt;Router> components of React Router v4?</h3>
+      <div class="answer">
+        <pre><code>
 
               React Router v4 provides below 3 &lt;Router> components:
 
@@ -3512,11 +3461,11 @@
               The above components will create browser, hash, and memory history instances.
               React Router v4 makes the properties and methods of the history instance associated with your router available through the context in the router object.
           </code></pre>
-        </div>
+      </div>
 
-        <h3>What is the purpose of push() and replace() methods of history?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is the purpose of push() and replace() methods of history?</h3>
+      <div class="answer">
+        <pre><code>
               A history instance has two methods for navigation purpose.
 
               1. push()
@@ -3526,11 +3475,11 @@
               to the array and replace() will replace the current location in the array with the new one.
 
           </code></pre>
-        </div>
+      </div>
 
-        <h3>How do you programmatically navigate using React Router v4?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How do you programmatically navigate using React Router v4?</h3>
+      <div class="answer">
+        <pre><code>
           There are three different ways to achieve programmatic routing/navigation within components.
 
               1. Using the withRouter() higher-order function:
@@ -3586,11 +3535,11 @@
                 })
               }
           </code></pre>
-        </div>
+      </div>
 
-        <h3>How to get query parameters in React Router v4?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to get query parameters in React Router v4?</h3>
+      <div class="answer">
+        <pre><code>
               The ability to parse query strings was taken out of React Router v4 because there have been user requests over the years to support different implementation. So the decision has been given to users to choose the implementation they like. The recommended approach is to use query strings library.
 
                   const queryString = require('query-string');
@@ -3604,21 +3553,21 @@
               You should use a polyfill for IE11.
 
           </code></pre>
-        </div>
+      </div>
 
-        <h3>What are Pure Components?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What are Pure Components?</h3>
+      <div class="answer">
+        <pre><code>
               React.PureComponent is exactly the same as React.Component except that it handles the shouldComponentUpdate() method for you.
               When props or state changes, PureComponent will do a shallow comparison on both props and state.
               Component on the other hand won't compare current props and state to next out of the box.
               Thus, the component will re-render by default whenever shouldComponentUpdate is called.
           </code></pre>
-        </div>
+      </div>
 
-        <h3>Why you get "Router may have only one child element" warning?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>Why you get "Router may have only one child element" warning?</h3>
+      <div class="answer">
+        <pre><code>
 
               You have to wrap your Route's in a &lt;Switch&gt; block because &lt;Switch&gt; is unique in that it renders a route exclusively.
 
@@ -3635,11 +3584,11 @@
                   &lt;/Router&gt;
 
           </code></pre>
-        </div>
+      </div>
 
-        <h3>How to pass params to history.push method in React Router v4?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to pass params to history.push method in React Router v4?</h3>
+      <div class="answer">
+        <pre><code>
               While navigating you can pass props to the history object:
 
                   this.props.history.push({
@@ -3651,11 +3600,11 @@
               The search property is used to pass query params in push() method.
 
           </code></pre>
-        </div>
+      </div>
 
-        <h3>How to implement default or NotFound page?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to implement default or NotFound page?</h3>
+      <div class="answer">
+        <pre><code>
               A &lt;Switch&gt; renders the first child &lt;Route&gt; that matches. A &lt;Route&gt; with no path always matches.
                So you just need to simply drop path attribute as below
 
@@ -3666,11 +3615,11 @@
                   &lt;/Switch&gt;
 
           </code></pre>
-        </div>
+      </div>
 
-        <h3>How to get history on React Router v4?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to get history on React Router v4?</h3>
+      <div class="answer">
+        <pre><code>
           Below are the list of steps to get history object on React Router v4,
 
               1. Create a module that exports a history object and import this module across the project.
@@ -3703,11 +3652,11 @@
                   history.push('/go-here')
 
           </code></pre>
-        </div>
+      </div>
 
-        <h3>How to perform automatic redirect after login?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>How to perform automatic redirect after login?</h3>
+      <div class="answer">
+        <pre><code>
 
               The react-router package provides &lt;Redirect&gt; component in React Router.
               Rendering a &lt;Redirect&gt; will navigate to a new location.
@@ -3726,13 +3675,13 @@
                     }
                   }
           </code></pre>
-        </div>
+      </div>
 
-        <h4>React Questions - Testing</h4>
+      <h4>React Questions - Testing</h4>
 
-        <h3>What is Shallow Renderer in React testing?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is Shallow Renderer in React testing?</h3>
+      <div class="answer">
+        <pre><code>
                   Shallow rendering is useful for writing unit test cases in React. It lets you render a component one level deep and assert facts about what its render method returns, without worrying about the behavior of child components, which are not instantiated or rendered.
 
                   For example, if you have the following component:
@@ -3763,11 +3712,11 @@
                       ])
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is TestRenderer package in React?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>What is TestRenderer package in React?</h3>
+      <div class="answer">
+        <pre><code>
 
                   This package provides a renderer that can be used to render components to pure JavaScript objects, without depending on the DOM or a native mobile environment. This package makes it easy to grab a snapshot of the platform view hierarchy (similar to a DOM tree) rendered by a ReactDOM or React Native without using a browser or jsdom.
 
@@ -3787,37 +3736,37 @@
                       // }
 
               </code></pre>
-        </div>
+      </div>
 
-        <h3>What is the purpose of ReactTestUtils package?</h3>
-        <div class="answer">
-          ReactTestUtils are provided in the with-addons package and allow you
-          to perform actions against a simulated DOM for the purpose of unit
-          testing.
-        </div>
+      <h3>What is the purpose of ReactTestUtils package?</h3>
+      <div class="answer">
+        ReactTestUtils are provided in the with-addons package and allow you
+        to perform actions against a simulated DOM for the purpose of unit
+        testing.
+      </div>
 
-        <h3>What is Jest?</h3>
-        <div class="answer">
-          Jest is a JavaScript unit testing framework created by Facebook based
-          on Jasmine and provides automated mock creation and a jsdom
-          environment. It's often used for testing components.
-        </div>
+      <h3>What is Jest?</h3>
+      <div class="answer">
+        Jest is a JavaScript unit testing framework created by Facebook based
+        on Jasmine and provides automated mock creation and a jsdom
+        environment. It's often used for testing components.
+      </div>
 
-        <h3>What are the advantages of Jest over Jasmine?</h3>
-        <div class="answer">
-          There are couple of advantages compared to Jasmine:<br />
+      <h3>What are the advantages of Jest over Jasmine?</h3>
+      <div class="answer">
+        There are couple of advantages compared to Jasmine:<br />
 
-          - Automatically finds tests to execute in your source code.<br />
-          - Automatically mocks dependencies when running your tests.<br />
-          - Allows you to test asynchronous code synchronously.<br />
-          - Runs your tests with a fake DOM implementation (via jsdom) so that
-          your tests can be run on the command line.<br />
-          - Runs tests in parallel processes so that they finish sooner.<br />
-        </div>
+        - Automatically finds tests to execute in your source code.<br />
+        - Automatically mocks dependencies when running your tests.<br />
+        - Allows you to test asynchronous code synchronously.<br />
+        - Runs your tests with a fake DOM implementation (via jsdom) so that
+        your tests can be run on the command line.<br />
+        - Runs tests in parallel processes so that they finish sooner.<br />
+      </div>
 
-        <h3>Give a simple example of Jest test case ?</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>Give a simple example of Jest test case ?</h3>
+      <div class="answer">
+        <pre><code>
 
                   Let's write a test for a function that adds two numbers in sum.js file:
 
@@ -3848,13 +3797,13 @@
                       ✓ adds 1 + 2 to equal 3 (2ms)
 
               </code></pre>
-        </div>
+      </div>
 
-        <h4>React Questions - Miscellaneous</h4>
+      <h4>React Questions - Miscellaneous</h4>
 
-        <h3>Open to see a lot of other questions</h3>
-        <div class="answer">
-          <pre><code>
+      <h3>Open to see a lot of other questions</h3>
+      <div class="answer">
+        <pre><code>
                   Give an example of reselect usage?
                   Does the statics object work with ES6 classes in React?
                   Can Redux only be used with React?
@@ -3973,81 +3922,55 @@
                   What is the difference between Imperative and Declarative in React?
                   What are the benefits of using typescript with reactjs?
                 </code></pre>
-        </div>
-
-        <div class="nav">
-          If you are interested in <i>HTML</i> and <i>CSS</i> questions. Click
-          this
-          <a
-            href="https://urakymzhan.github.io/html-css-prep-questions/"
-            target="_blank"
-            >link</a
-          >
-        </div>
-
-        <!-- REFERANCE -->
-        <div id="ref-wrapper">
-          <div class="nav-wrapper">
-            <h1 id="referance-title">Referances</h1>
-            <a href="#title"> GO TO TOP </a>
-          </div>
-
-          <ul id="referance">
-            <li>
-              <a
-                href="http://learn.seytech.co/courses/htmlcss/prepation"
-                target="_blank"
-                >seytech</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://github.com/yangshun/front-end-interview-handbook/blob/master/contents/en/css-questions.md#table-of-contents"
-                target="_blank"
-                >yangshun</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.thatjsdude.com/interview/html.html#bdo"
-                target="_blank"
-                >thatjsdude</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.w3schools.com/css/default.asp"
-                target="_blank"
-                >w3schools</a
-              >
-            </li>
-            <li>
-              <a href="https://developer.mozilla.org/en-US/" target="_blank"
-                >MDN</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.indeed.com/hire/interview-questions/css?aceid=&gclid=Cj0KCQjwgo_5BRDuARIsADDEntQ7QUfXU7ohlfsPK1eitgOQCcgm1W2Kl56VPY_dCwYtHWnifLPCkWMaAp4xEALw_wcB"
-                target="_blank"
-                >Indeed</a
-              >
-            </li>
-            <li>
-              <a
-                href="http://peterdoes.it/2015/12/03/a-personal-exercise-front-end-job-interview-questions-and-my-answers-all/"
-                target="_blank"
-                >Peter Dillon</a
-              >
-            </li>
-          </ul>
-        </div>
       </div>
-    </main>
-    <script type="text/javascript" src="index.js"></script>
-    <script src="highlight.pack.js"></script>
-    <script>
-      hljs.initHighlightingOnLoad();
-    </script>
-  </body>
+
+      <div class="nav">
+        If you are interested in <i>HTML</i> and <i>CSS</i> questions. Click
+        this
+        <a href="https://urakymzhan.github.io/html-css-prep-questions/" target="_blank">link</a>
+      </div>
+
+      <!-- REFERANCE -->
+      <div id="ref-wrapper">
+        <div class="nav-wrapper">
+          <h1 id="referance-title">Referances</h1>
+          <a href="#title"> GO TO TOP </a>
+        </div>
+
+        <ul id="referance">
+          <li>
+            <a href="http://learn.seytech.co/courses/htmlcss/prepation" target="_blank">seytech</a>
+          </li>
+          <li>
+            <a href="https://github.com/yangshun/front-end-interview-handbook/blob/master/contents/en/css-questions.md#table-of-contents"
+              target="_blank">yangshun</a>
+          </li>
+          <li>
+            <a href="https://www.thatjsdude.com/interview/html.html#bdo" target="_blank">thatjsdude</a>
+          </li>
+          <li>
+            <a href="https://www.w3schools.com/css/default.asp" target="_blank">w3schools</a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a>
+          </li>
+          <li>
+            <a href="https://www.indeed.com/hire/interview-questions/css?aceid=&gclid=Cj0KCQjwgo_5BRDuARIsADDEntQ7QUfXU7ohlfsPK1eitgOQCcgm1W2Kl56VPY_dCwYtHWnifLPCkWMaAp4xEALw_wcB"
+              target="_blank">Indeed</a>
+          </li>
+          <li>
+            <a href="http://peterdoes.it/2015/12/03/a-personal-exercise-front-end-job-interview-questions-and-my-answers-all/"
+              target="_blank">Peter Dillon</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <script type="text/javascript" src="index.js"></script>
+  <script src="highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</body>
+
 </html>
